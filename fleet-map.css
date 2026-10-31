@@ -1,0 +1,64 @@
+.fleet-panel {
+  margin: 0 0 16px;
+  scroll-margin-top: 170px;
+  border: 1px solid #cbd5dc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafb;
+  box-shadow: 0 8px 24px #1726370b;
+}
+.fleet-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 17px 20px 15px;
+  border-bottom: 1px solid #d8e0e5;
+  background: #fff;
+}
+.fleet-heading h2 { margin: 2px 0 0; font-size: 22px; letter-spacing: -.03em; }
+.fleet-kicker { color: #5c7182; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.fleet-demo-badge { padding: 6px 9px; border: 1px solid #d6bd90; border-radius: 3px; background: #fff7e7; color: #6e5126; font-size: 10px; font-weight: 800; letter-spacing: .04em; white-space: nowrap; }
+.fleet-layout { display: grid; grid-template-columns: minmax(0, 590px) minmax(230px, 1fr); gap: 0; }
+.fleet-map-wrap { padding: 14px 18px 10px; min-width: 0; }
+.fleet-map-canvas { position: relative; width: min(100%, 550px); aspect-ratio: 1; margin: auto; overflow: hidden; border: 1px solid #a8bec9; border-radius: 5px; background: #d9e8ed; }
+.fleet-map-canvas img, .fleet-overlay { display: block; width: 100%; height: 100%; }
+.fleet-overlay { position: absolute; inset: 0; }
+.fleet-route { fill: none; stroke: #2763c9; stroke-width: 2.1; stroke-dasharray: 4 5; opacity: .6; stroke-linejoin: round; }
+.fleet-home circle { fill: #203b50; stroke: #fff; stroke-width: 2.5; }
+.fleet-home-symbol { fill: #fff; }
+.fleet-car-halo { fill: #2454e6; stroke: #fff; stroke-width: 3; }
+.fleet-car-body { fill: #fff; }
+.fleet-car-front { fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.fleet-map-source { margin: 8px auto 0; width: min(100%, 550px); color: #657584; font-size: 10px; line-height: 1.45; }
+.fleet-map-source a { color: #315c8c; }
+.fleet-sidebar { display: flex; flex-direction: column; padding: 23px clamp(20px, 3vw, 38px); border-left: 1px solid #d8e0e5; background: linear-gradient(160deg, #f8fafb 0%, #ecf3f6 100%); }
+.fleet-time-label { color: #657584; font-size: 11px; font-weight: 750; text-transform: uppercase; letter-spacing: .08em; }
+.fleet-clock { display: block; margin: 7px 0 22px; color: #182d3e; font-size: clamp(21px, 2.25vw, 31px); font-weight: 750; line-height: 1.1; letter-spacing: -.035em; }
+.fleet-counts { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 26px; }
+.fleet-counts div { padding: 13px 14px; border: 1px solid #d4e0e7; border-radius: 5px; background: #fff; }
+.fleet-counts strong { display: block; font-size: 31px; line-height: 1; letter-spacing: -.06em; }
+.fleet-counts span { display: block; margin-top: 6px; color: #54697a; font-size: 11px; }
+.fleet-sidebar h3 { margin: 0 0 8px; font-size: 14px; }
+.fleet-moving-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid #d8e0e5; }
+.fleet-moving-list li { display: flex; align-items: center; gap: 9px; padding: 12px 0; border-bottom: 1px solid #d8e0e5; }
+.fleet-car-dot { width: 10px; height: 10px; flex: none; border-radius: 50%; background: #2454e6; box-shadow: 0 0 0 3px #dce6ff; }
+.fleet-moving-list li div { flex: 1; min-width: 0; }
+.fleet-moving-list strong { display: block; font-size: 13px; }
+.fleet-moving-list small { display: block; margin-top: 2px; color: #5e7080; font-size: 11px; }
+.fleet-moving-list [data-fleet-speed] { font-size: 12px; font-weight: 750; white-space: nowrap; color: #244d81; }
+.fleet-disclaimer { margin: auto 0 0; padding-top: 22px; color: #647687; font-size: 11px; line-height: 1.5; }
+@media (max-width: 840px) {
+  .fleet-layout { grid-template-columns: 1fr; }
+  .fleet-map-wrap { padding: 14px; }
+  .fleet-sidebar { border-left: 0; border-top: 1px solid #d8e0e5; }
+  .fleet-disclaimer { margin-top: 15px; }
+}
+@media (max-width: 500px) {
+  .fleet-heading { align-items: flex-start; flex-direction: column; gap: 8px; padding: 15px; }
+  .fleet-heading h2 { font-size: 20px; }
+  .fleet-map-wrap { padding: 8px; }
+  .fleet-map-source { padding: 0 6px; }
+  .fleet-sidebar { padding: 17px; }
+  .fleet-clock { font-size: 23px; }
+}

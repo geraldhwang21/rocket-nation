@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Critical path · Rocket Nation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .path-page {
+        padding: 65px var(--margin) 90px;
+      }
+      .path-page > h1 {
+        font-size: var(--head);
+        max-width: 18ch;
+      }
+      .path-intro {
+        max-width: 76ch;
+      }
+      .path-board {
+        margin: 50px 0;
+        background: var(--quiet);
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .path-node {
+        background: var(--ink);
+        color: var(--paper);
+        padding: 27px;
+        min-height: 200px;
+      }
+      .path-node h2 {
+        font-size: 25px;
+        margin-bottom: 18px;
+        letter-spacing: -0.025em;
+      }
+      .path-node p {
+        font-size: 16px;
+        margin: 0;
+        max-width: none;
+      }
+      .path-node .dependency {
+        font-size: 15px;
+        color: var(--paper);
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      .path-node.wide {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 40px;
+        align-items: start;
+      }
+      .path-node.wide h2 {
+        grid-column: 1 / -1;
+      }
+      .path-node.wide .dependency {
+        margin-top: 0;
+      }
+      .path-node.primary {
+        background: var(--accent);
+      }
+      .path-node.wide {
+        grid-column: span 3;
+      }
+      .path-branches {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin: 45px 0;
+      }
+      .path-branches article {
+        padding: 25px;
+        background: var(--quiet);
+      }
+      .path-branches h2 {
+        font-size: 25px;
+      }
+      .path-branches p {
+        font-size: 16px;
+      }
+      .path-gates details {
+        margin: 8px 0;
+      }
+      .path-gates summary {
+        background: var(--quiet);
+        border-color: var(--quiet);
+      }
+      .path-gates details p {
+        margin: 0;
+        max-width: 80ch;
+        padding: 16px 16px 8px;
+      }
+      .path-legend {
+        font-size: 15px;
+      }
+      .diagram-arrow {
+        text-align: center;
+        font-size: 25px;
+        grid-column: span 3;
+        line-height: 1;
+      }
+      .path-page > h2 {
+        font-size: var(--head);
+        margin-top: 65px;
+      }
+      @media (max-width: 760px) {
+        .path-page {
+          padding: 40px var(--margin) 70px;
+        }
+        .path-board {
+          grid-template-columns: 1fr;
+          padding: 20px;
+          gap: 10px;
+        }
+        .path-node.wide,
+        .diagram-arrow {
+          grid-column: auto;
+        }
+        .path-node.wide {
+          display: block;
+        }
+        .path-node.wide .dependency {
+          margin-top: 16px;
+        }
+        .path-node {
+          min-height: 0;
+          padding: 24px;
+        }
+        .path-branches {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .path-page > h1 {
+          font-size: 38px;
+        }
+        .path-node h2 {
+          font-size: 25px;
+        }
+      }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="assets/rn-mark.svg"></head>
+  <body>
+    <a class="skip-link" href="#critical-path">Skip to critical path</a>
+    <header class="document-header">
+      <div class="site-header">
+        <nav class="document-return-links" aria-label="Return to main site"><a href="index.html#home">Home</a><a href="index.html#execution">Execution</a></nav>
+      </div>
+    </header>
+    <main class="path-page">
+      <h1>The critical path</h1>
+      <p class="path-intro">
+        No scaled launch before paid demand, safe delivery, measured
+        contribution, and renewal. This graph shows decision dependencies. It
+        does not assign completion dates or imply any requirement has been met.
+      </p>
+      <div
+        class="path-board"
+        id="critical-path"
+        role="group"
+        aria-label="Critical path, read top to bottom and left to right"
+      >
+        <article class="path-node primary wide">
+          <h2>Accountable lead &amp; committed capacity</h2>
+          <p>
+            One operating lead. Confirm the people, productive cost, coverage,
+            and staged learning budget.
+          </p>
+          <p class="dependency">
+            Evidence: named owners, actual costs, approved allocation.
+            Prerequisite for the paid offer.
+          </p>
+        </article>
+        <div class="diagram-arrow" aria-hidden="true">↓</div>
+        <article class="path-node">
+          <h2>Customer records</h2>
+          <p>
+            Inspect permissioned call, estimate, schedule, and invoice records.
+            Establish a baseline and field capacity.
+          </p>
+          <p class="dependency">
+            Depends on: a qualified prospect, approved initial data terms, and client permission.
+          </p>
+        </article>
+        <article class="path-node">
+          <h2>Paid commitments</h2>
+          <p>
+            Win three bounded paid pilots near the proposed price. Document
+            scope and the economic buyer.
+          </p>
+          <p class="dependency">
+            Depends on: customer diagnosis, costed scope, and approved initial contract, data and contact rules.
+          </p>
+        </article>
+        <article class="path-node">
+          <h2>Safe operating setup</h2>
+          <p>
+            Apply approved contract and data terms to each client. Confirm access, consent, client authority, escalation contacts, and tested fallback.
+          </p>
+          <p class="dependency">
+            Depends on: approved initial boundaries and agreed pilot scope. Client-specific configuration and readiness checks follow. Live access waits for approval.
+          </p>
+        </article>
+        <div class="diagram-arrow" aria-hidden="true">
+          ↓ All three converge before live delivery
+        </div>
+        <article class="path-node wide">
+          <h2>Certified people &amp; live pilot</h2>
+          <p>
+            Rehearse normal and failure cases. Certify operators. Start
+            controlled traffic and record workload, errors, outcomes, and every
+            recurring cost.
+          </p>
+          <p class="dependency">
+            Evidence: client configuration approval, tested routing, backup
+            coverage, complete measurement records.
+          </p>
+        </article>
+        <div class="diagram-arrow" aria-hidden="true">↓</div>
+        <article class="path-node">
+          <h2>Quality passes</h2>
+          <p>
+            Meet the defined quality standard. No unresolved critical safety,
+            privacy, or financial error.
+          </p>
+          <p class="dependency">
+            If it fails: stop the affected workflow and correct the cause.
+          </p>
+        </article>
+        <article class="path-node">
+          <h2>Value &amp; cost pass</h2>
+          <p>
+            Show attributable client contribution and fully costed service
+            contribution. Do not count a booking as collected profit.
+          </p>
+          <p class="dependency">
+            If it fails: narrow scope, change price, or stop.
+          </p>
+        </article>
+        <article class="path-node">
+          <h2>Renewal passes</h2>
+          <p>
+            Obtain at least two standard-price renewals and repeat the work with another trained operator.
+          </p>
+          <p class="dependency">
+            If it fails: diagnose value, trust, price, or delivery before adding
+            clients.
+          </p>
+        </article>
+        <div class="diagram-arrow" aria-hidden="true">
+          ↓ All three must pass
+        </div>
+        <article class="path-node primary wide">
+          <h2>Controlled expansion</h2>
+          <p>
+            Release the next capital tranche. Add clients in measured cohorts.
+            Add automation only where the pilot proves its value.
+          </p>
+          <p class="dependency">
+            We decide separately whether to enter new trades, expand nationwide,
+            or replace the field-service platform.
+          </p>
+        </article>
+      </div>
+      <p class="path-legend">
+        Blue marks the investment decisions. Dark nodes show required evidence.
+        All nodes are proposed work, not completed operating milestones.
+      </p>
+      <h2>Work that can run in parallel</h2>
+      <div class="path-branches">
+        <article>
+          <h2>Platform &amp; security</h2>
+          <p>
+            Verify authorized platform access, minimum permissions, call-routing
+            fallback, data terms and integration rights. Do not connect
+            production records before approval.
+          </p>
+        </article>
+        <article>
+          <h2>People &amp; quality</h2>
+          <p>
+            Build the task taxonomy, scripts, escalation rules, training cases,
+            quality rubric, and backup plan. Use simulated cases until live
+            access is approved.
+          </p>
+        </article>
+        <article>
+          <h2>Sales &amp; evidence</h2>
+          <p>
+            Prepare the paid offer, diagnostic, consented baseline, pilot
+            scorecard, and buyer review. Record rejected offers as evidence too.
+          </p>
+        </article>
+      </div>
+      <h2>Rules for approval</h2>
+      <div class="path-gates">
+        <details>
+          <summary>What proves willingness to pay?</summary>
+          <p>
+            Three paid commitments from qualified buyers near the intended
+            price. Free trials, friendly interest, and nonbinding letters do not
+            establish a repeatable price.
+          </p>
+        </details>
+        <details>
+          <summary>What blocks live work?</summary>
+          <p>
+            Unclear authority, missing data terms, unsafe access, untested
+            escalation, no trained backup, or no way to reconcile the client's
+            records.
+          </p>
+        </details>
+        <details>
+          <summary>What justifies scaling?</summary>
+          <p>
+            Quality, attributable customer value, measured workload and cost,
+            at least two standard-price renewals, a funded cash bridge, and delivery that another certified
+            specialist can repeat.
+          </p>
+        </details>
+        <details>
+          <summary>What is deliberately deferred?</summary>
+          <p>
+            A new field-service platform, autonomous dispatch or technical
+            diagnosis, a technician app, a permit engine, and a shared
+            client-data training pool.
+          </p>
+        </details>
+      </div>
+      <p>
+        <a class="text-link" href="plan/implementation.html"
+          >Read owners, effort ranges, and the first actions ↗</a
+        >
+      </p>
+    </main>
+  </body>
+</html>

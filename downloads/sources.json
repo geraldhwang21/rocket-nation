@@ -1,0 +1,306 @@
+{
+  "researchDate": "2026-10-22",
+  "researchLimitations": "No private operational records or customer interviews; vendor claims not performance verification; assumptions do not inherit source authority.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Rocket Station home-services offer",
+      "url": "https://rocketstation.com/industries/home-services",
+      "type": "vendor",
+      "publicationDate": "2026 (page self-label)",
+      "accessDate": "2026-10-22",
+      "supports": "Managed volume-based home-services operations; workflow categories; existing-system positioning; current claims only",
+      "limitations": "Direct page read; marketing claims not independent capability/certification/staffing proof"
+    },
+    {
+      "id": "S02",
+      "title": "Census plumbing/heating/air-conditioning profile",
+      "url": "https://data.census.gov/profile/238220_-_Plumbing%2C_heating%2C_and_air-conditioning_contractors?g=010XX00US&n=238220",
+      "type": "government",
+      "publicationDate": "2023 reference data; 2025 release",
+      "accessDate": "2026-10-22",
+      "supports": "111,207 employer establishments in combined industry classification 238220",
+      "limitations": "Official indexed result supplied count; direct browser-readable page requires JavaScript; not HVAC-only"
+    },
+    {
+      "id": "S03",
+      "title": "Census CBP current data",
+      "url": "https://www.census.gov/programs-surveys/cbp/data.html",
+      "type": "government",
+      "publicationDate": "Current at access",
+      "accessDate": "2026-10-22",
+      "supports": "2023 is the latest reference year; 2024 release not scheduled",
+      "limitations": "Direct page read"
+    },
+    {
+      "id": "S04",
+      "title": "Census pest-control profile",
+      "url": "https://data.census.gov/profile/561710_-_Exterminating_and_pest_control_services?g=010XX00US&n=561710",
+      "type": "government",
+      "publicationDate": "2023 reference data",
+      "accessDate": "2026-10-22",
+      "supports": "16,535 employer establishments in industry classification 561710",
+      "limitations": "Official indexed text; not qualified buyers"
+    },
+    {
+      "id": "S05",
+      "title": "Census landscaping profile",
+      "url": "https://data.census.gov/profile/561730_-_Landscaping_services?n=561730",
+      "type": "government",
+      "publicationDate": "2023 reference data",
+      "accessDate": "2026-10-22",
+      "supports": "117,969 employer establishments in industry classification 561730",
+      "limitations": "Official indexed text; not qualified buyers"
+    },
+    {
+      "id": "S06",
+      "title": "Jobber pricing",
+      "url": "https://www.getjobber.com/pricing/",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "Annual-prepaid starting monthly equivalents; native workflow features and receptionist",
+      "limitations": "Direct page read; user tiers and plans differ; no quote guarantee"
+    },
+    {
+      "id": "S07",
+      "title": "ServiceTitan Contact Center Pro",
+      "url": "https://help.servicetitan.com/v1/docs/contact-center-pro",
+      "type": "vendor official documentation",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "Centralized multi-account calling and AI insights",
+      "limitations": "Official indexed result"
+    },
+    {
+      "id": "S08",
+      "title": "ServiceTitan Voice Agent configuration",
+      "url": "https://help.servicetitan.com/construction/docs/configure-your-voice-agent-settings",
+      "type": "vendor official documentation",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "Routine call handling and appointment booking",
+      "limitations": "Official indexed result; no performance test"
+    },
+    {
+      "id": "S09",
+      "title": "Housecall Pro pricing",
+      "url": "https://www.housecallpro.com/pricing/",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "Starting price headline; CSR AI, Voice, pipeline, and accounting offers",
+      "limitations": "Official indexed result; exact bundle/price requires quote"
+    },
+    {
+      "id": "S10",
+      "title": "Housecall Pro CSR AI guidance",
+      "url": "https://help.housecallpro.com/en/articles/12001958-csr-ai-best-practices-and-faqs",
+      "type": "vendor official documentation",
+      "publicationDate": "2026-01-20",
+      "accessDate": "2026-10-22",
+      "supports": "Service descriptions and pricebook configuration affect booking",
+      "limitations": "Official indexed full text"
+    },
+    {
+      "id": "S11",
+      "title": "PestPac platform",
+      "url": "https://www.pestpac.com/",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "Routing, scheduling, billing, chemical records, reporting, and integration categories",
+      "limitations": "Vendor claims; no causal growth percentages used"
+    },
+    {
+      "id": "S12",
+      "title": "Nexa services",
+      "url": "https://www.nexa.com/services/",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "People and AI answering, booking, outbound contact, and shared, fixed, or hybrid staffing models",
+      "limitations": "Vendor claims; no quoted price or independently verified performance"
+    },
+    {
+      "id": "S13",
+      "title": "Nexa integration FAQ",
+      "url": "https://www.nexa.com/frequently-asked-questions/",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "Published integration names",
+      "limitations": "No contractual/API entitlement inferred"
+    },
+    {
+      "id": "S14",
+      "title": "Smith.ai AI pricing",
+      "url": "https://smith.ai/pricing/ai-receptionist",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "US $150/month for 75 calls and US $500/month for 300 calls; separate overage charges",
+      "limitations": "Official indexed page; not equivalent to managed desk"
+    },
+    {
+      "id": "S15",
+      "title": "Smith.ai human pricing",
+      "url": "https://smith.ai/pricing/receptionists",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "US $2,100/month for 300 calls",
+      "limitations": "Official indexed page; tax/terms not fully reviewed"
+    },
+    {
+      "id": "S16",
+      "title": "PATLive pricing",
+      "url": "https://www.patlive.com/pricing/",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "US $759/month for 500 minutes and US $1.79 per extra minute; domestic live staffing claim",
+      "limitations": "Official source controls over older third-party pricing"
+    },
+    {
+      "id": "S17",
+      "title": "Wing assistant offer",
+      "url": "https://wingassistant.com/virtual-assistant/",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "US $999/month for 160 hours and US $699/month for 80 hours; general assistant offer",
+      "limitations": "Public generic role pricing; specialist prices differ; no delivery test"
+    },
+    {
+      "id": "S18",
+      "title": "BLS customer-service representatives",
+      "url": "https://www.bls.gov/ooh/office-and-administrative-support/customer-service-representatives.htm",
+      "type": "government",
+      "publicationDate": "May 2025 wage data; page modified 27 August 2026",
+      "accessDate": "2026-10-22",
+      "supports": "Median US $21.53/hour and US $44,770/year",
+      "limitations": "National occupation, not home-services-specific or loaded cost"
+    },
+    {
+      "id": "S19",
+      "title": "Jobber developer documentation",
+      "url": "https://developer.getjobber.com/docs/",
+      "type": "official technical documentation",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "OAuth and limited permission scopes",
+      "limitations": "Direct page read; no partnership entitlement inferred"
+    },
+    {
+      "id": "S20",
+      "title": "Twilio US voice pricing",
+      "url": "https://www.twilio.com/en-us/voice/pricing/us",
+      "type": "vendor",
+      "publicationDate": "Dynamic at access",
+      "accessDate": "2026-10-22",
+      "supports": "US $0.0085 per local inbound minute; US $1.15 per local number per month; US $0.014 per US outbound minute",
+      "limitations": "Direct page read; excludes other voice/application cost components"
+    },
+    {
+      "id": "S21",
+      "title": "FCC AI voice ruling",
+      "url": "https://docs.fcc.gov/public/attachments/FCC-24-17A1_Rcd.pdf",
+      "type": "regulator primary ruling",
+      "publicationDate": "2024-02-08",
+      "accessDate": "2026-10-22",
+      "supports": "AI voice falls within artificial/prerecorded voice TCPA restrictions",
+      "limitations": "Issue spotting; no blanket ban claim"
+    },
+    {
+      "id": "S22",
+      "title": "FTC business telemarketing amendment",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2024/03/ftc-implements-new-protections-businesses-against-telemarketing-fraud-affirms-protections-against-ai",
+      "type": "regulator",
+      "publicationDate": "2024-03",
+      "accessDate": "2026-10-22",
+      "supports": "Misrepresentation protections extended to business telemarketing",
+      "limitations": "Official text; not exhaustive communication-law review"
+    },
+    {
+      "id": "S23",
+      "title": "FTC CAN-SPAM guide",
+      "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+      "type": "regulator",
+      "publicationDate": "Current at access",
+      "accessDate": "2026-10-22",
+      "supports": "Business email included",
+      "limitations": "Official indexed text"
+    },
+    {
+      "id": "S24",
+      "title": "FTC fake-review final rule announcement",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+      "type": "regulator",
+      "publicationDate": "2024-08-14",
+      "accessDate": "2026-10-22",
+      "supports": "Fake reviews and sentiment-conditioned incentives prohibited",
+      "limitations": "Official indexed text"
+    },
+    {
+      "id": "S25",
+      "title": "PCI FAQ1533",
+      "url": "https://www.pcisecuritystandards.org/faqs/1533/",
+      "type": "standards body",
+      "publicationDate": "Current at access",
+      "accessDate": "2026-10-22",
+      "supports": "Sensitive authentication data must not be retained after authorization",
+      "limitations": "Direct page read from official FAQ link; not certification advice"
+    },
+    {
+      "id": "S26",
+      "title": "Philippines DPA implementing rules",
+      "url": "https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/",
+      "type": "regulator",
+      "publicationDate": "2016 rules; current source accessed",
+      "accessDate": "2026-10-22",
+      "supports": "Outsourcing safeguards and accountability",
+      "limitations": "Official indexed text; qualified interpretation needed"
+    },
+    {
+      "id": "S27",
+      "title": "Philippines NPC data security",
+      "url": "https://privacy.gov.ph/data-security/",
+      "type": "regulator",
+      "publicationDate": "Current at access",
+      "accessDate": "2026-10-22",
+      "supports": "Controller responsibility for outsourced/transferred personal data",
+      "limitations": "Official indexed text; not complete cross-border legal review"
+    },
+    {
+      "id": "S28",
+      "title": "NIST small-business cybersecurity guide",
+      "url": "https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide",
+      "type": "government",
+      "publicationDate": "2024-02-26",
+      "accessDate": "2026-10-22",
+      "supports": "Govern, identify, protect, detect, respond, and recover framework",
+      "limitations": "Direct official publication page"
+    },
+    {
+      "id": "S29",
+      "title": "US5737728A published patent",
+      "url": "https://patents.google.com/patent/US5737728A/en",
+      "type": "published patent primary text via mirror",
+      "publicationDate": "1998 publication",
+      "accessDate": "2026-10-22",
+      "supports": "Prior art: AI/optimization scheduling and assignment",
+      "limitations": "Limited landscape, no legal status/claims/FTO determination"
+    },
+    {
+      "id": "S30",
+      "title": "US20100312604A1 published application",
+      "url": "https://patents.google.com/patent/US20100312604A1/en",
+      "type": "published patent application primary text via mirror",
+      "publicationDate": "2010 publication",
+      "accessDate": "2026-10-22",
+      "supports": "Prior art: technician scheduling/control",
+      "limitations": "Limited landscape, no patentability/clearance claim"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Economics calculation sheet · Rocket Nation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .calc-page {
+        padding: 65px var(--margin) 90px;
+      }
+      .calc-page > h1 {
+        font-size: var(--head);
+        max-width: 22ch;
+      }
+      .calc-intro {
+        max-width: 76ch;
+      }
+      .calc-page h2 {
+        margin-top: 56px;
+      }
+      .calc-steps {
+        max-width: 96ch;
+        padding-left: 1.2em;
+      }
+      .calc-steps li {
+        margin: 10px 0;
+      }
+      .calc-steps strong {
+        white-space: nowrap;
+      }
+      .calc-months td,
+      .calc-months th {
+        white-space: nowrap;
+      }
+      .calc-inputs th[colspan] {
+        text-align: left;
+        padding-top: 18px;
+      }
+      .calc-inputs td:last-child {
+        text-align: right;
+        white-space: nowrap;
+      }
+      @media (max-width: 760px) {
+        .calc-page {
+          padding: 40px var(--margin) 70px;
+        }
+        .calc-page > h1 {
+          font-size: 38px;
+        }
+      }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="assets/rn-mark.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#calculation-sheet">Skip to calculation sheet</a>
+    <header class="document-header">
+      <div class="site-header">
+        <nav class="document-return-links" aria-label="Return to main site">
+          <a href="index.html#economics">Back to Economics inputs</a><a href="index.html#home">Home</a>
+        </nav>
+      </div>
+    </header>
+    <main class="calc-page" id="calculation-sheet">
+      <h1>Economics calculation sheet</h1>
+      <p class="calc-intro" id="calc-source"></p>
+      <p class="form-error" id="calc-error" role="alert" hidden></p>
+
+      <h2>1. Inputs used</h2>
+      <div class="table-frame">
+        <div class="table-scroll" role="region" aria-label="Inputs used" tabindex="0">
+          <table class="econ-table calc-inputs">
+            <thead>
+              <tr><th scope="col">Input</th><th scope="col">Value</th></tr>
+            </thead>
+            <tbody id="calc-inputs"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2>2. One client, one month</h2>
+      <p class="calc-intro">
+        Per-client figures share people fully, so a client can cost a fraction
+        of a person.
+      </p>
+      <ol class="calc-steps" id="calc-per-client"></ol>
+
+      <h2>3. Clients needed to break even</h2>
+      <ol class="calc-steps" id="calc-break-even"></ol>
+
+      <h2>4. Staffing and costs in one month</h2>
+      <p class="calc-intro">
+        The projection hires whole people. This worked example is the final
+        month shown; the table in section 5 repeats the same steps every month.
+      </p>
+      <ol class="calc-steps" id="calc-month"></ol>
+
+      <h2>5. Month by month</h2>
+      <div class="table-frame">
+        <p class="table-hint" aria-hidden="true">Swipe to see more →</p>
+        <div class="table-scroll" role="region" aria-label="Month-by-month projection" tabindex="0">
+          <table class="cash-bridge-table econ-table calc-months">
+            <thead>
+              <tr>
+                <th scope="col">Month</th>
+                <th scope="col">Billing clients</th>
+                <th scope="col">Lost</th>
+                <th scope="col">New</th>
+                <th scope="col">Clients at end</th>
+                <th scope="col">Specialists</th>
+                <th scope="col">Supervisors</th>
+                <th scope="col">Engineers</th>
+                <th scope="col">Account managers</th>
+                <th scope="col">Monthly fees</th>
+                <th scope="col">Setup fees</th>
+                <th scope="col">Philippines cost</th>
+                <th scope="col">India cost</th>
+                <th scope="col">United States cost</th>
+                <th scope="col">Software and AI</th>
+                <th scope="col">Sales and marketing</th>
+                <th scope="col">Fixed overhead</th>
+                <th scope="col">Total cost</th>
+                <th scope="col">Operating profit</th>
+                <th scope="col">Cumulative cash</th>
+              </tr>
+            </thead>
+            <tbody id="calc-rows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2>6. Headline results</h2>
+      <ol class="calc-steps" id="calc-headline"></ol>
+
+      <nav class="section-return-links" aria-label="Return to Economics">
+        <a href="index.html#economics">Back to Economics inputs</a>
+      </nav>
+    </main>
+    <script type="module" src="calculations.js"></script>
+  </body>
+</html>

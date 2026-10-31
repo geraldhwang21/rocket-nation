@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#171a20" />
+    <meta name="description" content="Rocket Nation's internal prospect workspace. Filter companies, explore territories, and organize outreach." />
+    <title>Prospects · Rocket Nation</title>
+    <link rel="preload" href="assets/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="prospects.css" />
+    <script type="module" src="prospects.js"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/rn-mark.svg"></head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to prospects</a>
+    <header class="workspace-header">
+      <a class="wordmark" href="index.html#home"><img class="wordmark-logo" src="assets/rn-logo-reverse.svg" width="712" height="186" alt="Rocket Nation" /><span>Sales workspace</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#chapters">Business Plan TOC</a>
+      </nav>
+    </header>
+    <main class="workspace-main">
+      <section class="prospect-controls" aria-label="Prospect controls">
+      <div class="page-heading">
+        <div><p class="eyebrow">Market development</p><h1>Prospects</h1></div>
+        <div class="data-actions">
+          <button id="toggle-filters" class="button filter-toggle" type="button" aria-expanded="true" aria-controls="filter-panel">Hide filters</button>
+          <details class="data-menu">
+            <summary class="button">Data &amp; notes</summary>
+            <div class="data-menu-body">
+              <p id="dataset-status" class="muted" role="status">Loading prospect data…</p>
+              <p id="field-coverage" class="pilot-fields-note"></p>
+              <p>Restore previously exported call notes, or load a compatible prospect-data JSON file. Notes are saved in this browser; export activity to keep a separate copy.</p>
+              <label class="button import-button" for="import-data">Restore notes or load data<input id="import-data" type="file" accept="application/json,.json" /></label>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="view-tabs" role="group" aria-label="Prospect views">
+        <button type="button" data-view="list" aria-pressed="true">Prospect table</button>
+        <button type="button" data-view="territory" aria-pressed="false">Territory view</button>
+        <button type="button" data-view="calls" aria-pressed="false">Call workspace</button>
+      </div>
+      <section id="filter-panel" class="filter-panel" aria-label="Filter prospects" tabindex="0">
+        <form id="filters" class="filter-grid" role="search">
+          <div class="filter-field filter-search"><label for="filter-q">Search companies</label><input id="filter-q" name="q" type="search" placeholder="Name, place or keyword" autocomplete="off" /></div>
+          <div class="filter-field"><label for="filter-state">State</label><select id="filter-state" name="state"><option value="">All states</option></select></div>
+          <div class="filter-field"><label for="filter-city">City</label><select id="filter-city" name="city"><option value="">All cities</option></select></div>
+          <div class="filter-field"><label for="filter-msa">Metropolitan area</label><select id="filter-msa" name="msa"><option value="">All metropolitan areas</option></select></div>
+          <div class="filter-field"><label for="filter-industry">Industry</label><select id="filter-industry" name="industry"><option value="">All industries</option></select></div>
+          <div class="filter-field"><label for="filter-size">Company size</label><select id="filter-size" name="size"><option value="">Any size</option></select></div>
+          <div class="filter-field"><label for="filter-status">Outreach status</label><select id="filter-status" name="status"><option value="">All statuses</option><option value="uncontacted">Uncontacted</option><option value="follow-up">Follow-up</option><option value="contacted">Contacted</option><option value="do-not-call">Do not call</option></select></div>
+          <div class="filter-field"><label for="filter-contact">Contact available</label><select id="filter-contact" name="contact"><option value="">Any contact</option><option value="phone">Phone available</option><option value="website">Website available</option></select></div>
+          <div class="filter-field"><label for="filter-sort">Sort by</label><select id="filter-sort" name="sort"><option value="company">Company name</option><option value="state">State</option><option value="city">City</option><option value="size">Company size</option><option value="follow-up">Follow-up date</option></select></div>
+          <button type="reset" class="button reset-button" aria-label="Reset filters">Reset</button>
+        </form>
+      </section>
+      </section>
+      <div id="workspace-scroll" class="workspace-scroll" role="region" aria-label="Scrollable prospect results" tabindex="0">
+      <div class="results-toolbar">
+        <p id="result-count" role="status" aria-live="polite">Preparing prospects…</p>
+        <div class="export-actions"><button id="export-results" class="button" type="button">Export results</button><button id="export-activity" class="button" type="button">Export activity</button></div>
+      </div>
+      <div id="load-error" class="error-notice" role="alert" hidden></div>
+      <section id="workspace" tabindex="-1" aria-label="Prospect results"><div class="empty-state"><p>Loading your prospect workspace…</p></div></section>
+      <footer class="workspace-footer">
+        <p id="save-status" role="status">Outreach activity is saved in this browser only. Export activity to keep a separate copy.</p>
+        <p id="dataset-summary">Unknown means the spreadsheet has no usable value. Open a company to see its source details.</p>
+      </footer>
+      <noscript><p class="error-notice">Enable JavaScript to filter prospects, switch views, and record outreach.</p></noscript>
+      </div>
+    </main>
+    <dialog id="prospect-detail" aria-labelledby="detail-title">
+      <div class="dialog-heading"><div><p class="eyebrow">Company details</p><h2 id="detail-title">Prospect</h2></div><button id="close-detail" class="button" type="button">Close</button></div>
+      <div id="detail-body"></div>
+      <form id="activity-form" class="activity-form">
+        <h3>Outreach activity</h3>
+        <div class="activity-fields"><div class="filter-field"><label for="activity-outcome">Outcome</label><select id="activity-outcome" name="outcome"><option value="uncontacted">Uncontacted</option><option value="contacted">Contacted</option><option value="follow-up">Follow-up</option><option value="do-not-call">Do not call</option></select></div><div class="filter-field"><label for="activity-follow-up">Follow-up date and time</label><input id="activity-follow-up" name="followUp" type="datetime-local" /></div></div>
+        <label for="activity-note">Notes</label><textarea id="activity-note" name="note" maxlength="2000" rows="4" placeholder="Record the conversation or next step"></textarea>
+        <div class="activity-actions"><button class="button primary" type="submit">Save activity</button><button id="undo-activity" class="button" type="button">Undo last activity</button></div>
+      </form>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,5409 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-27T20:58:02.968Z",
+  "source": {
+    "path": "prospect-data/jobs/general-collection-03-17-snapshot.json",
+    "sha256": "df5be738e3ad11443d1b28b3a88ec1b14f7c485b0bc63ab7ebbc4f1e536df190",
+    "selectedBy": "review-readiness.json production.snapshot",
+    "readinessPath": "prospect-data/jobs/review-readiness.json",
+    "readinessSha256": "61808fd23e3ea816d5c4bfa56bf6a0b72cc3dea44a22983178bbd82c69e8abd0",
+    "readinessVersion": 8,
+    "readinessClosedAt": "2026-10-23T12:28:41.855433+00:00",
+    "reviewPath": "prospect-data/review/production-reviewed.jsonl",
+    "reviewSha256": "9dc2988f9e115f60d54ac3e33d339164b461a0a5b020210790aef043e21f0165",
+    "annotationSources": [
+      {
+        "kind": "independent-blind",
+        "path": "prospect-data/review/independent-output-review.json",
+        "sha256": "398b4281e5ce8177bc0f08b75e68023b17a3ea75fd3843ff8fe5577270658d14"
+      },
+      {
+        "kind": "later-exposed-follow-up",
+        "path": "prospect-data/review/duplicate-review-03-18.json",
+        "sha256": "899849b2adf4267e4b573565f7e9cf5a7d0d640d93777f8b08004286030b975f"
+      }
+    ],
+    "reviewReady": false,
+    "phaseComplete": false,
+    "nationalEligible": false,
+    "qualityComparisonPerformed": false,
+    "salesReady": false,
+    "snapshotAuthoritative": true,
+    "reviewsNewerThanSnapshot": false,
+    "unboundReviewCount": 0,
+    "broadSourceIdentityCount": 15493,
+    "broadResearchIdentityCount": 15393,
+    "producerVerifiedCount": 100,
+    "reviewedCompanyCount": 100,
+    "quarantinedExcludedCount": 4,
+    "independentReviewCounts": {
+      "Supported": 94,
+      "Unknown": 6
+    },
+    "followUpReviewCounts": {
+      "Grouping resolved (exposed)": 98,
+      "Unknown (exposed)": 2
+    },
+    "notes": [
+      "Producer-reviewed roster selected by the current readiness file; not an accepted, quality-evaluated population.",
+      "Independent blind judgment, later exposed follow-up and commercial suitability are separate facts. Follow-up does not replace the blind judgment or prove service eligibility.",
+      "Not sales-ready: national coverage, phase completion and commercial fit are not established.",
+      "Phones are source observed; reachability has not been tested.",
+      "City comes from the latest snapshot-bound review; metropolitan area, employee count and revenue remain unknown."
+    ]
+  },
+  "records": [
+    {
+      "id": "07a2dad8-05c3-5a8f-bf8d-d7d1f9be166d",
+      "name": "MyOffice",
+      "state": "CA",
+      "city": "SAN DIEGO",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "858-549-6700",
+      "website": "https://4myoffice.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source addendum names MyOffice, Inc., links 4myoffice.com and gives 8585496700; own-site MyOffice identity, exact phone and Southern California office-furniture workflow agree.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://4myoffice.com",
+          "observedAt": "2026-10-23T04:05:47.382488+00:00",
+          "sha256": "e69f4f42145e969c4cbc412814915915641e9d5af32d6e523564d29c050a50aa"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "0899a20e-9acd-5981-818f-928b608f79cb",
+      "name": "American Plumbing Group",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "6195347034",
+      "website": "https://www.americanplumbinggroup.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original Overture source names American Plumbing Group, links this exact domain and gives +16195347034; own-site title identifies San Diego plumbing and repeats 6195347034.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.americanplumbinggroup.com",
+          "observedAt": "2026-10-23T04:09:04.910338+00:00",
+          "sha256": "ce9e5351a579a76510a628fcd6230f8e7ce3816acf4b63c30bf25ba8695fd82f"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "0ba855df-cb7c-5e76-aecb-89fb3c22145d",
+      "name": "KDR Electric Services, Inc.",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 832-6955",
+      "website": "https://austinelectricalservice.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 3,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source license 17452, phone and McNeil address all match site identifiers, supporting the operating business despite abbreviated source name.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://austinelectricalservice.com/",
+          "observedAt": "2026-10-23T08:55:44.750431+00:00",
+          "sha256": "e62921e208b2e309289e551c06f5527c8c8ea7a27a15b751cbb64692a5bac395"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "0dfe86dd-943f-5a90-b563-9c634f76f489",
+      "name": "Xplore Plumbing",
+      "state": "WA",
+      "city": "Seattle",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+12068881832",
+      "website": "https://www.Xploreplumbing.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Retained source links this exact domain to Xplore Plumbing in Seattle; site identifies West Seattle plumbing and Puget Sound service. Changed phone is disclosed without inventing an ownership change.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.Xploreplumbing.com",
+          "observedAt": "2026-10-23T04:25:14.540397+00:00",
+          "sha256": "ba485ab5b91c5a2e20fa69d1f35a02c5238fa66830a15ba7ce3d40db16986363"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "0ea78b29-588c-5e18-a663-6dd144f369fc",
+      "name": "Malco Electric",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 301-9111",
+      "website": "https://www.malcoelectric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source business name, phone and street address match the site; household and commercial work is explicit.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://www.malcoelectric.com/",
+          "observedAt": "2026-10-23T09:08:40.551790+00:00",
+          "sha256": "135b6efbb4982e1cc4659f7d484dd2f1f83831d2a813b1574cd15f571fa36b05"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "114cc688-1c40-5913-88cc-ff0bc6fcc7b3",
+      "name": "Beckett Electrical Services",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 346-7462",
+      "website": "https://beckettelectrical.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact contractor license 20254 and source phone 5123467462 appear on the same Austin commercial electrical site.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://beckettelectrical.com/",
+          "observedAt": "2026-10-23T09:08:42.393144+00:00",
+          "sha256": "a240e4e6f1a0326d20add2813da5487f582c38ff4a9ab72897b3b57c020d5208"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "11a448a2-4918-5a9d-b11f-5ffd64dc28cc",
+      "name": "Monna Italian Luxe",
+      "state": "TX",
+      "city": "Austin",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(737) 336-4697",
+      "website": "https://monnaitalianluxe.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source names Monna Italian Luxe at its exact domain with 5125816369 and Austin address; own-site identity and matching phone support association independently of candidate claim.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://monnaitalianluxe.com",
+          "observedAt": "2026-10-23T04:06:40.951438+00:00",
+          "sha256": "40c35005dea238f78798b42a76764d76339a2bde3abba22225cdf61eaee97eb5"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "service_area": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "12cc141d-b841-5013-9f91-e14b1b2acda1",
+      "name": "Harvey Electric, Inc.",
+      "state": "TX",
+      "city": "CEDAR PARK",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 251-2203",
+      "website": "https://harveyelectric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source name and phone 5122512203 match the site, which expressly describes Central Texas residential and commercial electrical work.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://harveyelectric.com/",
+          "observedAt": "2026-10-23T09:08:42.895058+00:00",
+          "sha256": "6fba0deed7a10e691b03cc2bed3508f9628e9df076a69ce28b10ac46a506eb2d"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "138d7ee7-7a16-568b-bc3b-c79377c65abb",
+      "name": "AMD Electrical Contracting LLC",
+      "state": "TX",
+      "city": "Austin",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 263-4359",
+      "website": "https://amdaustin.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 2,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact company identity and Cuernavaca address connect both home and contact-page originals to the source; different phone is disclosed.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://amdaustin.com/",
+          "observedAt": "2026-10-23T09:14:44.695401+00:00",
+          "sha256": "b35b551388432af9c6b421b1968c01435e8ab52855b958ec1c9f4c70667d61c1"
+        },
+        {
+          "url": "https://amdaustin.com/contact",
+          "observedAt": "2026-10-23T09:14:07.300771+00:00",
+          "sha256": "bedb306f2589514612117af0553c13f4cf2298cbfdbe9951aa7117f38cf3d948"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "154505d7-afcd-5a35-9a5d-4793f1a10902",
+      "name": "Esko Electric, Inc.",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512-288-4063",
+      "website": "https://eskoelectricinc.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source company name, 9020 Circle Drive address and business phone all match the own-site extraction.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://eskoelectricinc.com/",
+          "observedAt": "2026-10-23T08:55:45.251232+00:00",
+          "sha256": "2a0c6514418e7e247ce960e05874b761ad917580e0845b9aeb8e6d866362bb65"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "1a2041c4-db5d-5d6a-8458-2ff8d8db9506",
+      "name": "Efficient Comfort",
+      "state": "CO",
+      "city": "Broomfield",
+      "msa": null,
+      "industries": [
+        "heating_cooling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+17207303455",
+      "website": "https://coefficientcomfort.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Retained source gives this exact domain and Broomfield identity; current site explicitly names Broomfield within its Denver/Boulder operation.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://coefficientcomfort.com/",
+          "observedAt": "2026-10-23T04:05:48.187544+00:00",
+          "sha256": "8ac8f23f01c8d48f977c046304c9c783bb2508ab498e293b526f25a64998514a"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "250d1598-5247-577c-bddd-4d8590c33d3c",
+      "name": "Made in the Shade",
+      "state": "FL",
+      "city": "Palmetto",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+1-813-590-6805",
+      "website": "https://mitstampabay.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked regional domain and Tampa Bay name correspond to site-defined locally owned window-treatment operation.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://mitstampabay.com/",
+          "observedAt": "2026-10-23T04:25:17.343282+00:00",
+          "sha256": "ad5607b215500ab4324f05466a9b6d42bedc60862793fd2332954b529313d353"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "2631c4ea-3ec5-52d7-9a96-60f0678eff47",
+      "name": "AC Electric",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 444-9700",
+      "website": "https://acelectricaustin.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source license 20902 and phone match site, and Austin scope and household/business service are explicit.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://acelectricaustin.com/",
+          "observedAt": "2026-10-23T09:12:31.792311+00:00",
+          "sha256": "1431ae65f9a65378786f8dc6cb96eb8f17f1a0470f2a9fd09525281039c8054e"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "2795d461-97fb-50eb-9525-22850021ff26",
+      "name": "Outdoor Saratoga Living",
+      "state": "NY",
+      "city": null,
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds",
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "518-641-9435",
+      "website": "https://saratogastonework.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 0,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source phone 5186419435 appears exactly on the Saratoga outdoor construction site; name variation alone is not the basis of association.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://saratogastonework.com/",
+          "observedAt": "2026-10-23T04:27:31.941953+00:00",
+          "sha256": "26c44fc0cc274e6a568fa47b6e690d60860e10e19e6112ac13fa7537e28b4a9a"
+        }
+      ],
+      "gaps": [
+        "city_unknown"
+      ],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "2a7982e4-097b-5a36-9114-a3706125b641",
+      "name": "Move Plus",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "18006683304",
+      "website": "https://move-plus.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source links move-plus.com to Move Plus in San Diego; own-site exact business identity and explicit San Diego moving scope support ordinary association despite different public phones.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://move-plus.com",
+          "observedAt": "2026-10-23T04:09:05.911270+00:00",
+          "sha256": "73b307165224868060734daa8d57610badf06d88929129e0352e6a8dfa15b9cf"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "30c68fef-b051-5021-be9c-1539454c5e44",
+      "name": "KTUA",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "619.294.4477",
+      "website": "https://www.ktua.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source identifies KTU & A Planning and Landscape Architecture at ktua.com with +16192944477; own-site KTUA title, exact phone and local built-environment portfolio agree.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.ktua.com/",
+          "observedAt": "2026-10-23T04:09:06.545364+00:00",
+          "sha256": "4dc407d281aa2e9603e8ef0ad5043afc119c7845900642158863da79fb4c3531"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "service_area": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "34b3b001-16f8-5402-88d9-8fdf846e311a",
+      "name": "Moving Square",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "858-357-4537",
+      "website": "https://www.move-square.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source Move Square domain and phone +18583574537 match Moving Square site phone and explicit San Diego moving identity.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.move-square.com/",
+          "observedAt": "2026-10-23T04:09:10.531801+00:00",
+          "sha256": "43e0439aa6dbaa344f32da62ff4384a1b81040ea3a855dbba49840372e96b2a4"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "36480995-bb18-5289-8b01-e8ea14b898b8",
+      "name": "All Dry Services of North Denver & Boulder",
+      "state": "CO",
+      "city": "Commerce City",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "3038163813",
+      "website": "https://myalldry.com/north-denver-boulder-colorado/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked location path and locality names match the site; this establishes the North Denver/Boulder local franchise scope rather than the national brand.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://myalldry.com/north-denver-boulder-colorado/",
+          "observedAt": "2026-10-23T04:25:10.948572+00:00",
+          "sha256": "2f9aef150bbeaa4bb83470f15e3c25dc7f0e69a1b882e485e074899f12c13087"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "36e49312-046f-583b-b458-a8931599eb5e",
+      "name": "Anthony's Plumbing",
+      "state": "WA",
+      "city": "Seattle",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "1-206-906-9279",
+      "website": "https://www.anthonysplumbingcompany.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source domain, operating identity and phone 2069069279 match the Seattle own-site extraction.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.anthonysplumbingcompany.com",
+          "observedAt": "2026-10-23T04:07:28.877930+00:00",
+          "sha256": "fbe91becbbcc7942f5f8a4b395e6651715d887a87738e7f6d2edde1994afc3cc"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "37f39076-c9b1-5536-971f-50b9d44d9f5f",
+      "name": "Craftsman Plumbing",
+      "state": "WA",
+      "city": "Seattle",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "206-855-6110",
+      "website": "https://craftsman-plumbing.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact retained source domain and phone match a site explicitly identifying Seattle plumbing service.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://craftsman-plumbing.com/",
+          "observedAt": "2026-10-23T04:07:32.207171+00:00",
+          "sha256": "4cb0fb747f68dea323c39daee039f579d4151481a8cd4f78ab3b3bee64317121"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "3945bb1b-d5ec-5852-8095-20156c4ab0f5",
+      "name": "Quality Refrigeration",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "heating_cooling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+310-549-1532",
+      "website": "https://www.qualityref.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source identifies Quality Refrigeration in San Diego with exact domain and 6192301534. This exact local service phone appears on the multi-location own site, supporting the San Diego operating service unit rather than collapsing all brand locations.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.qualityref.com/",
+          "observedAt": "2026-10-23T04:09:13.892300+00:00",
+          "sha256": "0773982dc5029c499a6e8b0f57ce8372216678332bb96101eaf359acca28f211"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "3cadde3b-bfa1-5aa4-89cb-9555fd8bdfe7",
+      "name": "Satori Home Staging & Design",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": null,
+      "website": "https://satorihomedesign.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact retained source-linked domain and detailed business name match the own-site identity; home staging is explicit and San Diego references are present.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://satorihomedesign.com/",
+          "observedAt": "2026-10-23T04:25:21.590089+00:00",
+          "sha256": "14da896d82cfd5088baf8c570c0d1d663bba38baa6fdd06e0b39188e0360e500"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "3f842af9-bd30-572e-b8fc-936179d78ee1",
+      "name": "Synergy",
+      "state": "FL",
+      "city": "TAMPA",
+      "msa": null,
+      "industries": [
+        "electrical",
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "877-273-2035",
+      "website": "https://www.synergyfl.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact retained source domain and trade identity match smart-home and outdoor-living services across Tampa, Orlando and Jacksonville; Tampa branch unit remains unverified.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.synergyfl.com",
+          "observedAt": "2026-10-23T04:25:27.172152+00:00",
+          "sha256": "1c0d7ac4d49fa430ae296f923e70653a858e89ede9d8d25f7cac80eaaae500fb"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "412596d5-3e81-545b-8d43-4f5df4b22ded",
+      "name": "Parker Electric",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512-836-9779",
+      "website": "https://www.parkerelectric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source operating name and business phone exactly match the site; commercial building electrical work is substantive and eligible.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://www.parkerelectric.com/",
+          "observedAt": "2026-10-23T08:55:46.311761+00:00",
+          "sha256": "3327bdbc2f25b5913f940aae27b0e7319f1e2a6efc7092ace5db453fefe91d2c"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "43249a02-70b6-52ef-8a82-c4a96cf846bd",
+      "name": "Adam's Apple Tree Service",
+      "state": "TX",
+      "city": "Austin",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "5129128733",
+      "website": "https://adamsappletreeservice.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact domain, name, phone and Austin scope connect source and own-site tree-service operation.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://adamsappletreeservice.com",
+          "observedAt": "2026-10-23T04:07:35.348570+00:00",
+          "sha256": "9903571828773d30025cb98866cd40b5e9d3b1a86dd8bee38ebd3f3692c64d33"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "43ad18a8-f703-5b86-a93d-79042f0f637a",
+      "name": "King Enterprises",
+      "state": "NY",
+      "city": "Saratoga Springs",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "518-584-5296",
+      "website": "https://www.kingent.net/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Retained source domain/name and phone match the Maple Avenue property-services site.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.kingent.net/",
+          "observedAt": "2026-10-23T04:07:49.679450+00:00",
+          "sha256": "1a05358d3406520b0630c0cbd8ef288bcae40bce638f5594d0d9f266e5b782b9"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "4645548a-cd1c-5ccf-bb1f-7483cd88d150",
+      "name": "You Decide Home Cleaning",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": null,
+      "website": "https://form.jotform.com/261821120419044",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source links the exact hosted form and business name; original form title explicitly identifies the San Diego booking operation, supporting ordinary association despite placeholder phone.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://form.jotform.com/261821120419044",
+          "observedAt": "2026-10-23T04:09:15.730234+00:00",
+          "sha256": "1bf8ae4e8573cdf4b0cc125ace0381fe517894d51fcc25bf0a231abc457dd018"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "4a15b9d8-cc38-57b5-92dc-0af8b9f06937",
+      "name": "The Comfort Crew Heating and Cooling",
+      "state": "CO",
+      "city": "Denver",
+      "msa": null,
+      "industries": [
+        "heating_cooling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+17209525961",
+      "website": "https://comfort-crew.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact retained source domain and detailed operating identity match a site explicitly advertising Denver household HVAC service.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://comfort-crew.com",
+          "observedAt": "2026-10-23T04:25:18.719235+00:00",
+          "sha256": "b3b3b952764f298a4e189e8868a8ea63dba64dbb2b13e3175b15f91579b6b424"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "4a8c9be2-7941-5e41-ab48-0773958671ac",
+      "name": "Carpet Cleaners San Diego",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(619) 399-7935",
+      "website": "https://www.carpet-cleaners-san-diego.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact domain, phone and locality support attachment; service headings identify household carpet, upholstery and house cleaning.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.carpet-cleaners-san-diego.com/",
+          "observedAt": "2026-10-23T04:09:15.948726+00:00",
+          "sha256": "bbdaac7a16ca00525d0b6343b5663c7238fb0cfcea3c9fa9d3b8834fe1641a90"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "4d822f16-b8fe-5943-a3c0-784981c6fd7b",
+      "name": "Power Quality Engineering, Inc.",
+      "state": "TX",
+      "city": "CEDAR PARK",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 267-6656",
+      "website": "https://pqeinc.com/about-us/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source business name, phone and full Woodall address match the site; commercial/industrial electrical field services qualify under broad scope.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://pqeinc.com/about-us/",
+          "observedAt": "2026-10-23T09:12:32.649271+00:00",
+          "sha256": "a9e183cc57fa822e03215821ae7638ec959d3c6d29791860c13901f44be3312f"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "4dbe537a-1b6b-5eab-b11b-7c92bd69fa78",
+      "name": "Richard's Electric, Inc.",
+      "state": "TX",
+      "city": "CEDAR PARK",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 259-4595",
+      "website": "https://richards-electric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Matching operating name and phone support association despite source LP versus site Inc. and Cedar Park versus Liberty Hill mailing address.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://richards-electric.com/",
+          "observedAt": "2026-10-23T08:55:46.939530+00:00",
+          "sha256": "4875e93c43c355e7916f1b419b0061f5742655c8131d2f8d990ac5e28489c66b"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "50b9cd45-1faf-51a8-91e2-c8fc0db3e3bb",
+      "name": "Plumbing Outfitters",
+      "state": "TX",
+      "city": "Taylor",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "7373138208",
+      "website": "https://plumbingoutfitters.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Unknown",
+        "reason": "Own-site clearly provides Taylor/Austin residential and light-commercial plumbing, but source has no domain and its phone differs; name plus locality alone cannot prove attachment.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Fresh retained contact factual extract publishes 24 CR 496, Taylor TX 76574, matching original source 24 County Road 496 in Taylor. Address bridge plus same operating brand and delivered plumbing services resolve previously absent source-to-site association. Source7373048073 and site7373138208 remain different observations. No legal ownership or numeric containment proof.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://plumbingoutfitters.com/",
+          "observedAt": "2026-10-23T04:27:36.934171+00:00",
+          "sha256": "fdb8f5d91303c8e1018ab1618d694019b176ffaed09c4ba27c3fea42f6faaf29"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "53c76334-0b8b-5c39-a023-b267033b15c6",
+      "name": "Coastal Electric",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(619) 202-1036",
+      "website": "https://www.coastalelectric.co/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Retained source domain and phone match own-site San Diego County electrical/solar service identity.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.coastalelectric.co/",
+          "observedAt": "2026-10-23T04:09:17.141741+00:00",
+          "sha256": "3fd904bbad11695c125937830d7dc703b8b49095ba33b0266db9de81bcaede79"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "545c48b0-3df7-567e-8338-817735655718",
+      "name": "Progetto Shades",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+18583381678",
+      "website": "https://www.progettoshades.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and phone connect iL Progetto source record to Progetto Shades operating identity; actual service is window treatments.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.progettoshades.com/",
+          "observedAt": "2026-10-23T04:25:22.268331+00:00",
+          "sha256": "4baedfd2623b9c99a0e4b6043a9e63d2f22fd67b191e76591b5c98f06a4540d5"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "57de4bd1-1dc8-50ea-bfce-efb9582d2f96",
+      "name": "Environs Landscape Architecture Inc.",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "619.232.7007",
+      "website": "https://environs.us/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source environs links environs.us and +16192327007 in San Diego; exact own-site phone 619.232.7007 and landscape-architecture identity establish the operating association.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://environs.us/",
+          "observedAt": "2026-10-23T04:29:47.361631+00:00",
+          "sha256": "6e4477505453f29cf24fa63ef8ff131511c55e1a856848d402d0190151bd0dd8"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "service_area": "not_disclosed",
+        "named_contact_role": "not_disclosed"
+      }
+    },
+    {
+      "id": "5a3c7251-4bc7-5e1b-ae26-9838f4ad83ca",
+      "name": "Brennan Landscaping",
+      "state": "NY",
+      "city": "Schenectady",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "5183468266",
+      "website": "https://brennanlandscapinginc.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source domain/name/phone match the own-site lawn-care operation in Schenectady/Capital Region.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://brennanlandscapinginc.com/",
+          "observedAt": "2026-10-23T04:27:41.488115+00:00",
+          "sha256": "9297f5288ed2f11cb89db30bfd96a72d57a3888f7e4727d21307cd707775bb90"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "5aa62be5-cb5a-5dd8-aa61-db25b8f6438b",
+      "name": "Windward Life Care",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "home_health_nonmedical_care"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "619-450-4300",
+      "website": "https://www.windwardlifecare.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source domain, name, phone and San Diego scope match substantive home-care services.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.windwardlifecare.com",
+          "observedAt": "2026-10-23T04:09:18.303209+00:00",
+          "sha256": "342d365df68184ef9796d0219f149f00b0486793401f54d5623708a9d73ef74c"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "5ca05f04-9dd8-5dae-921f-5ead8fea5bd3",
+      "name": "Total Screen",
+      "state": "CA",
+      "city": null,
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "1-619-871-7610",
+      "website": "https://totalscreen.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 3,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked exact domain, operating name and phone match the screen-replacement site; county service scope is explicit in source.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://totalscreen.com/",
+          "observedAt": "2026-10-23T04:25:26.565948+00:00",
+          "sha256": "84680a79d9ca520c0dc18efbc18aa1e7004077adcf72bc9a15ed2354d16cc9bb"
+        }
+      ],
+      "gaps": [
+        "city_unknown"
+      ],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "65be7c53-625f-53b9-a3d9-3aa8399438a0",
+      "name": "Velocity Air Conditioning",
+      "state": "FL",
+      "city": "Clearwater",
+      "msa": null,
+      "industries": [
+        "heating_cooling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "7273377716",
+      "website": "https://velocityairconditioning.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and business identity match the own-site Tampa Bay HVAC operation, supporting ordinary association despite different phone.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://velocityairconditioning.com",
+          "observedAt": "2026-10-23T04:07:33.858575+00:00",
+          "sha256": "21f8e5d8a7fd49ef88ea4ad5eff6e508dfc269257d3dd4abd11145bac6e747e2"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "66e9815d-a77b-5b09-88fa-5ce36b65c232",
+      "name": "Pro Delivery Service LLC",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(619) 888-7881",
+      "website": "https://prodeliveryservice.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source domain/name/phone match a site explicitly identifying San Diego moving services.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://prodeliveryservice.com/",
+          "observedAt": "2026-10-23T04:29:49.150147+00:00",
+          "sha256": "449c06824331f939027a4d946a91429378481e353febe90f9faa4907662dd9ff"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "6c550888-d597-546d-93d0-ffe5ff256e2e",
+      "name": "HALO Home Services",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+18883774256",
+      "website": "https://www.halohomeservices.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source names Halo Home Services at exact domain and +18883774256 in San Diego; own-site name/phone match and Southern California service scope includes the source locality.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.halohomeservices.com",
+          "observedAt": "2026-10-23T04:09:19.444449+00:00",
+          "sha256": "cc4ed1c4c6492e624cae9a08adc043592350570fcc6459771f538b8801ed24be"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "6d8a6906-c4e8-5432-8fad-6b17283c9198",
+      "name": "OneTouch Cleaners",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+16196184137",
+      "website": "https://www.onetouchcleaners.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source domain/name/phone and San Diego scope match the original, which explicitly describes a local operation rather than a franchise.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.onetouchcleaners.com/",
+          "observedAt": "2026-10-23T04:29:50.046747+00:00",
+          "sha256": "6b7c0a730ea6dfc94702aacb92d18816c3f182247d3d3d975bca97b2e9473088"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "6f3ebfff-5a49-55c8-a16e-7c85aea4d23b",
+      "name": "VS Pro Painting",
+      "state": "TX",
+      "city": "Austin",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "5129555028",
+      "website": "https://vspropainting.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Although extracted primary phone differs, own-site operational excerpt contains the source phone exactly, with the same business identity and Austin scope.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://vspropainting.com/",
+          "observedAt": "2026-10-23T04:27:44.200316+00:00",
+          "sha256": "cb89ec1074e8eaa4e475d128860358cc6de741761ceef8bbd431e032e54a48bb"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "713a4917-3d8a-53bb-a890-69a8436e20fa",
+      "name": "Enviro-Master Services",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "619-304-0946",
+      "website": "https://california.enviro-master.com/commercial-cleaning-locations/san-diego-california/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked San Diego location URL and matching site locality identify the local service operation rather than the whole franchise brand.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://california.enviro-master.com/commercial-cleaning-locations/san-diego-california/",
+          "observedAt": "2026-10-23T04:07:33.151197+00:00",
+          "sha256": "4d001d01480a3900b9de7f25874ae2fbe587399227ad057dbfab34d3c293960c"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "724564bf-69f4-5e0b-8a72-7da1683e6100",
+      "name": "4Ewa Design",
+      "state": "NY",
+      "city": "Clifton Park",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "914.447.5834",
+      "website": "https://www.4ewadesign.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact domain, phone and Clifton Park service area support the source attachment and design operating unit.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.4ewadesign.com",
+          "observedAt": "2026-10-23T04:08:15.925188+00:00",
+          "sha256": "f780b72464dcebeb9525fd85f6f9a8f449a32e1b8364443e15267d227940f930"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "755f3035-1b21-5c1f-8cd5-42354ff2c53f",
+      "name": "SoCal Concierge Services",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest",
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+18589051432",
+      "website": "https://socalconcierge.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and phone match concierge/cleaning business identity; actual services include household care, errands and pet sitting.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://socalconcierge.com/",
+          "observedAt": "2026-10-23T04:27:32.604048+00:00",
+          "sha256": "54baf659932bc74053c23947ed016c66df0cf5ffea4289d25194a40602c6e753"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "75cd2056-f824-5357-b027-8f5482b5b72f",
+      "name": "Howie’s Heating and Air",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "heating_cooling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(619) 387-3005",
+      "website": "https://www.howiesheatandair.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact domain, phone and San Diego identity connect source to own-site household HVAC operation.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.howiesheatandair.com/",
+          "observedAt": "2026-10-23T04:29:51.124040+00:00",
+          "sha256": "d33489aab1ef17eba0ff6fb1baaad57511481859b137b5d478ad73ba228dabed"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "77e06b08-a0bd-5bbc-838b-ae30a00b89c2",
+      "name": "Molitor Electric",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 659-6410",
+      "website": "https://www.molitorelectric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source license 17722, phone and Beaver Trail unit address all match the own-site Austin residential electrical operation.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://www.molitorelectric.com/",
+          "observedAt": "2026-10-23T08:55:47.619455+00:00",
+          "sha256": "538ea94690427cf8659ffd428663ee66bcdf805c19fe8d50940300c4bf30c540"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "7974bbb5-d4f4-5bfe-a8e4-1b8fdb55b96c",
+      "name": "Master HVAC & Electric",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical",
+        "heating_cooling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 882-1100",
+      "website": "https://servicefirst-hvac.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source license 20093 and exact Guadalupe address bridge former source name Service First to current site operating name; different phone does not erase those matches.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://servicefirst-hvac.com/",
+          "observedAt": "2026-10-23T09:08:43.592444+00:00",
+          "sha256": "7bb8870fbc6ce80fb6a6be62b56f0eeeecc34e46c1489ad356e98ae23b6dbe03"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "805616ea-10c0-5bb8-8353-a0622cef1272",
+      "name": "Landscape Workshop",
+      "state": "FL",
+      "city": "New Port Richey",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+12055473945",
+      "website": "https://landscapeworkshop.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source names Landscape Workshop (source misspells Landsacpe) and links landscapeworkshop.com. Own-site exact brand identity and landscaping work support brand association, but no local phone/address or location page establishes New Port Richey operating unit.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://landscapeworkshop.com",
+          "observedAt": "2026-10-23T04:07:40.064398+00:00",
+          "sha256": "5497085f282b3d230867bf7a684b51e7d86c084dfafe43251cdbc8b00d47daa5"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "80fe112d-f533-5024-a240-4939b9086b17",
+      "name": "Junk Away San Diego",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "858-321-5555",
+      "website": "https://junkawaysandiego.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and source phone agree with the current San Diego junk-removal page; this is a service operator for homeowners and businesses.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://junkawaysandiego.com/",
+          "observedAt": "2026-10-23T04:27:35.180052+00:00",
+          "sha256": "ecf437edb0abea5caae2c1681b16f3cf07256c872f507d82b638e6a7ed6f7211"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "831df7d0-bfdf-5dae-994c-e3747cd3ad87",
+      "name": "Sids Carpet Barn",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "6194777000",
+      "website": "https://www.sidscarpet.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 3,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source-linked flooring business publishes the source San Diego phone among three store phones and explicitly serves San Diego County and Southern California. Treat the company as a regional operating business; no independent Miramar company is established.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.sidscarpet.com",
+          "observedAt": "2026-10-23T04:07:48.809288+00:00",
+          "sha256": "65aed4d6018a91c9847cc01c06067114ac692b9de0f5ed2310507d27ef6cb5b1"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "83c75e9e-6db8-57b2-9bea-4df642c32d78",
+      "name": "Austin Roofing Company & handyman",
+      "state": "TX",
+      "city": "Austin TX",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "5122595265",
+      "website": "https://austinlocalroofing.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source domain, phone and Austin roofing/handyman identity agree; home repair and roof repair establish eligible operations.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://austinlocalroofing.com/",
+          "observedAt": "2026-10-23T04:08:22.025535+00:00",
+          "sha256": "ef284701f1bc63c388c3aba1388c807c38719865baf340265acca6f9ca504e49"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "83f8df29-3461-5cd4-8d4b-158def9cd501",
+      "name": "Soleil Floors",
+      "state": "TX",
+      "city": "Round Rock",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+15122180400",
+      "website": "https://soleilfloors.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Although the directory has no website, the original matches its phone, company and Round Rock location, and describes flooring and remodeling delivered to homes.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://soleilfloors.com/",
+          "observedAt": "2026-10-23T04:27:48.833481+00:00",
+          "sha256": "4e48a3da061801494548617aafcb2bcb254a9a2284ba8e2dc67595cc91741dea"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "867ed53d-ac03-522d-b878-c9134c52f4d9",
+      "name": "Solid Plumbing & Drains",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "619-853-3213",
+      "website": "https://solidplumbingdrains.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked domain identifies Solid Plumbing & Drains serving San Diego properties through its Chula Vista team, with explicit plumbing delivery and contractor license. This supports ordinary company association despite a different published phone.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://solidplumbingdrains.com/",
+          "observedAt": "2026-10-23T04:09:21.098956+00:00",
+          "sha256": "d5c734071d19d39afab70d9b75f7de34dbf25378ffbcf0a5e7a2d7ca1b7df490"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "8a297a83-461e-5375-a1f4-52c2b5dbcff6",
+      "name": "HP Roofing Pro",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+19095211285",
+      "website": "https://hproofingpro.com/locations/commercial-roofing-contractors-in-san-diego-county/?keyword?utm_source=bing",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source links an HP Roofing Pro San Diego page and the retained page explicitly identifies that company providing San Diego County commercial roofing. Commercial building roof repair and restoration are within scope; a separately owned San Diego branch is not asserted.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://hproofingpro.com/locations/commercial-roofing-contractors-in-san-diego-county/?keyword?utm_source=bing",
+          "observedAt": "2026-10-23T04:29:51.607290+00:00",
+          "sha256": "f84f80599f69e891e4cea566fe2a4b483f0db696bd0fdd16c80674eac7fdfb4c"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "8a6f609c-19a6-581b-b6b2-79985553295f",
+      "name": "Critter Control of San Diego",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(858) 242-2077",
+      "website": "https://www.crittercontrol.com/office-finder/california/san-diego/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked San Diego office page names the local franchise and explicitly identifies its independent operator, Swift Wildlife Control LLC. Home wildlife removal and repairs are eligible; the unit is the San Diego franchise, not all Critter Control.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.crittercontrol.com/office-finder/california/san-diego/",
+          "observedAt": "2026-10-23T04:09:22.782451+00:00",
+          "sha256": "8fc2c3a7b1ba3b76f2395813faa89116ceeb6c3df43583e379fa72761755a86d"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "8b798fdf-f6cc-58cb-8a90-213b49529f97",
+      "name": "Right Way Pressure Washing San Diego",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+16197842185",
+      "website": "https://pressurewashingsandiego.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain, phone, name and San Diego scope agree. The page explicitly offers residential and commercial washing and service scheduling.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://pressurewashingsandiego.com/",
+          "observedAt": "2026-10-23T04:09:27.379012+00:00",
+          "sha256": "cd75b7469b2b504660470d7a121037afc44f1d6e257ac5d87590c02384024c0c"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "8cb64048-7b71-5b84-8ab5-53b49730c832",
+      "name": "Brushy Creek Electric",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "1-512-335-2828",
+      "website": "https://brushycreekelectric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The contractor source and own site agree on license 19461, phone and Austin address. Residential and commercial electrical work and service upgrades show an operating contractor.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://brushycreekelectric.com/",
+          "observedAt": "2026-10-23T09:08:44.149401+00:00",
+          "sha256": "b626479e838bc881202358d7d78f29cb5c2fcb6d836ea365baa5ec17005e3cbc"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "8e38464b-0727-53e9-af31-85ee75b542e1",
+      "name": "Instate Service Group",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "heating_cooling",
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "6193231741",
+      "website": "https://instateservicegroup.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked business and phone agree with San Diego plumbing and heating/cooling operations and homeowner scheduling.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://instateservicegroup.com/",
+          "observedAt": "2026-10-23T04:29:56.581704+00:00",
+          "sha256": "168e7357085a03906dac083cce8dc5ef8790ea1fb9f58e38c8d1b6c1d3bb1738"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "8fc8ff5c-da24-5020-aa96-d9aa1e0768e4",
+      "name": "Mexi Maids Cleaning",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "619.777.2063",
+      "website": "https://www.meximaidscleaningsandiego.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 3,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source addendum links the exact Mexi Maids domain and name to San Diego; quoted original names the same San Diego cleaning operation and household service, supporting association despite changed phone.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://www.meximaidscleaningsandiego.com/",
+          "observedAt": "2026-10-23T02:42:51.869623+00:00",
+          "sha256": "de34e62d0ed446328de2efb90b8810f247dc0f5bb648b9177fdd1f927a03c057"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "address": "conflicting",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "934f0f37-540d-5f7d-b26c-e8313a909b24",
+      "name": "Trek Movers",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": " 800-298-0044",
+      "website": "https://trekmovers.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked Trek Movers domain and phone match a California moving company explicitly describing its own trained movers and no brokers. Company association and household service eligibility are supported, but the generic page does not resolve a distinct San Diego operating unit.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://trekmovers.com",
+          "observedAt": "2026-10-23T04:09:33.982796+00:00",
+          "sha256": "2f3e5a5b8d62308d0a970c8fa3e958df7c953af329b1e8c2bafa748103d4da8c"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "94441c71-5cc6-5de6-8e37-8dc1543bb5cd",
+      "name": "On The Way Air",
+      "state": "FL",
+      "city": "Lutz",
+      "msa": null,
+      "industries": [
+        "heating_cooling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "8139222209",
+      "website": "https://callontheway.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked domain and phone match a heating/cooling operator whose service headings explicitly include Lutz and North Tampa homeowners.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://callontheway.com",
+          "observedAt": "2026-10-23T04:07:49.340382+00:00",
+          "sha256": "241e7763d897972fa55c482c9675b194bdd11ef1795ea0addeaf0e09d9b1bad8"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "949e25e2-ad71-5b6d-a30d-e16d0cd5e9a3",
+      "name": "Wilkins Electric Inc.",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512-656-8631",
+      "website": "https://wilkinselectricinc.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The original matches the source license 21396 and McPhaul Street Austin address; residential new construction, remodels and other home electrical services establish eligible operations despite different phones.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://wilkinselectricinc.com/",
+          "observedAt": "2026-10-23T09:12:33.981963+00:00",
+          "sha256": "f6fd3d27c5a64a917670d9e4cbc41966707f2edd6b55f754ba645249a72b30fc"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "94dbfa85-2a98-5a72-841f-b6e90c87deb9",
+      "name": "Lyons Electric, Inc.",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512.587.4977",
+      "website": "https://www.lyonselectric.com/contact-us/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The original matches the source license 17365 and phone 5125874977 and describes Austin/Round Rock residential lighting and installations.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://www.lyonselectric.com/contact-us/",
+          "observedAt": "2026-10-23T09:06:37.296430+00:00",
+          "sha256": "e011a611964336468ab3bc244d83409aefac0c5ef43af4a8f954341724170e63"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "94f3fb4b-9203-5c97-b97f-487e936037ca",
+      "name": "Smarter Homes of Austin",
+      "state": "TX",
+      "city": "West Lake Hills",
+      "msa": null,
+      "industries": [
+        "electrical",
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+1-512-775-6101",
+      "website": "https://www.smarterhomesaustin.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The original's phone matches the source Smarter Homes record, and the Austin luxury-home automation page describes design, installation, programming and handoff.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.smarterhomesaustin.com/",
+          "observedAt": "2026-10-23T04:27:51.455787+00:00",
+          "sha256": "ba75d4fa2ca0a93fed1dcd615669de7cb11e50c7d1ed2dce2886651469df049f"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "9bbeef51-8031-593e-acbc-24816d0ebcf7",
+      "name": "Interior Designs Atelier",
+      "state": "NY",
+      "city": "Saratoga Springs",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "5183217440",
+      "website": "https://interiordesignsatelier.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked domain and company title explicitly identify the Saratoga Springs interior design business and residential design scope. Name alone is not the association anchor; the source's own-site link and specific location agree.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://interiordesignsatelier.com",
+          "observedAt": "2026-10-23T04:08:28.260928+00:00",
+          "sha256": "6c2c9aa5105c975035d7b92ab0de68f214044d256223deb6fa5a6b92cfde8684"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "a2f16034-0794-52ca-ab1e-497d01a6cced",
+      "name": "The Window Depot",
+      "state": "FL",
+      "city": "Palm Harbor",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "239-310-6414",
+      "website": "https://www.thewindowdepotllc.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked domain and phone match the window, door and exterior-remodeling operator, whose service area explicitly includes Palm Harbor and West Florida homes and businesses.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.thewindowdepotllc.com",
+          "observedAt": "2026-10-23T04:07:51.548705+00:00",
+          "sha256": "66ccf85a99930e007d8618a7ea8efab64fc797a09f7056ac5e8ed07a17175267"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "a2f9aad9-18d1-5b02-81fc-ac9d062fe13a",
+      "name": "RRM Design Group",
+      "state": "WA",
+      "city": "Seattle",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds",
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(805) 543-1794",
+      "website": "https://www.rrmdesign.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Unknown",
+        "reason": "The source-only addendum links RRM Design Group's exact domain to a Seattle office, but the retained own site lists only California phones and no Seattle geography. The practice's housing and building-design services are eligible, while source-to-Seattle operating-unit association remains unresolved.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retain valid distinctive source-linked domain and substantive design-business identity. Fresh request blocked at inherited content cap; Seattle phone/address remain uncorroborated. No absence or legal-owner conclusion.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.rrmdesign.com/",
+          "observedAt": "2026-10-23T04:07:50.665706+00:00",
+          "sha256": "ac6f764d76325030fe1cc9a726851e65fe5d980990898322acf359b184723051"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "a2fe1173-e251-5c08-93a0-ae73ddcfb83a",
+      "name": "ClearQuest",
+      "state": "FL",
+      "city": "Lutz",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(813)729-2125",
+      "website": "https://www.clearquestwater.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source-linked water-treatment domain and phone agree, and the original explicitly covers Lutz and Tampa Bay homes and businesses.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.clearquestwater.com",
+          "observedAt": "2026-10-23T04:07:53.866936+00:00",
+          "sha256": "df1c05547a3df3352fcc9360f6cd15d9de0e8e2f6b42d496c81fdcde851f2f5f"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "a85f6a25-5586-5b19-902f-b6efcca3cb2e",
+      "name": "Elk Electric",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+1 (512) 442-8085",
+      "website": "https://elkelectric.com/contact/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The original matches the contractor source phone and Weidemar Lane Austin address. Electrical construction, service, maintenance and building automation establish commercial-building services within the stated broad eligibility.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://elkelectric.com/contact/",
+          "observedAt": "2026-10-23T08:55:50.971870+00:00",
+          "sha256": "ef721ccb2e039da675d2d19dc2dc0a1a23de68fc68d90956e304d74e0fcfb1c9"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "a8a7e98e-55ac-51ed-92dc-64d85c7b5bdc",
+      "name": "Devonshire Landscapes",
+      "state": "WA",
+      "city": "Burien",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": null,
+      "website": "https://devonshirelandscapes.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked landscape company names Burien and nearby areas explicitly and describes ongoing mostly residential maintenance. This supports the local operating business without a phone match.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://devonshirelandscapes.com/",
+          "observedAt": "2026-10-23T04:27:38.713422+00:00",
+          "sha256": "18ff5ad25bf3202a5a4a76c3bcdb88de87d38710a3849bfaa36404f84244e5d7"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "b32f6f54-2cba-5247-9641-4d859cbc8987",
+      "name": "Sunny Builders Group",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds",
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+18588881725",
+      "website": "https://sunnybuildersgroupsd.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked domain and phone match a San Diego backyard-remodeling operator explicitly describing in-home consultation, yard construction and county service geography.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://sunnybuildersgroupsd.com",
+          "observedAt": "2026-10-23T04:07:55.987669+00:00",
+          "sha256": "5d850c8386ab8f35c88d1957625e4abc1a2ca1f5924a1778839f48bc9c0c4d54"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "b4e53ef9-00a3-5e8f-93bc-aaaadbf09fff",
+      "name": "All City Electric, Inc.",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(619) 398-4000",
+      "website": "https://www.allcityelectricsd.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source domain and phone match the explicitly San Diego electrical operator, with service, installation, troubleshooting and repair for hot tubs and swim spas.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.allcityelectricsd.com/",
+          "observedAt": "2026-10-23T04:09:35.408974+00:00",
+          "sha256": "781a5bbbff8837575f040af505f3a6c5a93c7b1590c6b295c9739b4c6ab7fd87"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "b552f550-8d95-5f20-8e94-d54476a4ff22",
+      "name": "H&B cleaning services and comercial",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": null,
+      "website": "https://www.hbcleaning.biz",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Unknown",
+        "reason": "The addendum source Aragon's H&b Cleaning Services links this exact domain, but the retained page only names H&B cleaning and generic professional services, with no phone, geography or detailed work. The source's San Diego unit and exact Aragon attachment are insufficiently corroborated.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Unknown (exposed)",
+        "reason": "Source explicitly links hbcleaning.biz, so limited website association is supported. Fresh site names H&B and publishes Central Falls RI4015453019, while source names Aragon's H&b in San Diego6198755121. Generic template services/testimonial placeholder do not establish actual source operating company or cross-region operator relationship. Direct domain link does not erase observed conflict. Neither inactivity nor misattachment is established.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.hbcleaning.biz",
+          "observedAt": "2026-10-23T04:09:35.754233+00:00",
+          "sha256": "eac549bd99170cd592812adbb9e3bbbc06e18e57db5a4d29ce41760ad5e85f5f"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "b64879a7-89b0-5b4a-a543-e56670b834b4",
+      "name": "Action Roofing & Construction",
+      "state": "TX",
+      "city": "Liberty Hill",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "5128441802",
+      "website": "https://actionroofingaustin.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Despite the source's Action Exteriors name, its exact domain and phone agree with Action Roofing & Construction, and Liberty Hill appears explicitly in the service area. This supports ordinary operating-business association, without proving legal-name equivalence.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://actionroofingaustin.com/",
+          "observedAt": "2026-10-23T04:08:51.409058+00:00",
+          "sha256": "df98c31deb81e270afd708918f15d9841ca6f9a1b301045dcc3ac017ca5eef5a"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "b7a7fb51-d0ab-55e3-a863-0d02d850be30",
+      "name": "Roto-Rooter",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "619-596-0888",
+      "website": "https://www.rotorooter.com/sandiego/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked San Diego page names the local plumbing service operation and describes residential and commercial service with a local schedule number. Scope is the San Diego service operation, not the national brand as one assumed local company.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.rotorooter.com/sandiego/",
+          "observedAt": "2026-10-23T04:09:37.102039+00:00",
+          "sha256": "c99ac0c7b48f9febed7f81d3491e0e8679782f0ec594bda03ec345679775df55"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "ba7fb2d1-a010-59cc-afa2-78e563027c78",
+      "name": "Colepepper Plumbing",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+1-619-838-1322",
+      "website": "https://colepepperplumbing.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source's exact own-site domain identifies Colepepper Plumbing serving San Diego homes and businesses with plumbing installation and repair. Company and local scope agree despite a different phone.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://colepepperplumbing.com/",
+          "observedAt": "2026-10-23T04:29:58.010740+00:00",
+          "sha256": "919f1fa5869b329f3f40d02235c73cbe22cc9b92db56ec0a564e61a2cbc968b2"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "bc45114c-cbbc-5021-81de-e68e9a543a94",
+      "name": "Republic Services",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": null,
+      "website": "https://www.republicservices.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Unknown",
+        "reason": "The addendum source links the Republic Services homepage to a San Diego place, but the retained national page has no matching source phone, address or local operating unit. Residential collection and bulk pickup establish eligible service; national brand agreement alone cannot resolve the San Diego operating company.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retain valid source-linked customer-facing collection business association. New contact retrieval timed out; no San Diego operator/office or subsidiary equivalence established. No parent network merge.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.republicservices.com",
+          "observedAt": "2026-10-23T04:07:58.036818+00:00",
+          "sha256": "e9d421d0d24fa0e90bd538fbbad9192ac5bb4debc31a2d722ec41a6d51713afe"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "bc62e370-a438-5ed9-8212-3b8c0c4f65cc",
+      "name": "CaliDream Landscape",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+6199134025",
+      "website": "https://calidreamlandscape.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Unknown",
+        "reason": "The addendum source links the exact landscape-company domain, but its phone differs from the retained original and neither local geography nor substantive landscaping service text is retained. Source-to-San Diego operating-unit attachment remains unresolved rather than treating a name match as identity.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Original source explicit domain and distinctive landscape business identity remain valid. New retained contact factual extract publishes matching60111thAveSanDiego address and substantive landscape design/hardscaping/lighting/irrigation service interests. Source6192500513 and site6199134025 remain dated conflicting observations. Address bridge supports local association without incorporation or numeric containment proof.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://calidreamlandscape.com/",
+          "observedAt": "2026-10-23T04:30:01.319724+00:00",
+          "sha256": "5bccfde7d1daf2cba19b52438f354e935545f13daa50073de2a273f37ec153e4"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "bde98f3a-0969-5474-b083-5ac1d270ed0b",
+      "name": "Dream Electronic Recycling",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "6198891305",
+      "website": "https://dreamewaste.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and phone agree with the San Diego recycling operator. Residential electronics recycling and pickup show eligible household-service operations even where drop-off is free.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://dreamewaste.com",
+          "observedAt": "2026-10-23T04:08:06.422989+00:00",
+          "sha256": "698a7e50896cd521021822f04764c3f043008420b3fda9e740c8bbabaa889e0f"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "be037b26-640c-5965-a6d4-97e18969fe6a",
+      "name": "Bowne Electric, Inc.",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512-454-5325",
+      "website": "https://www.bowneelectric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The original matches contractor-source license 18296, phone and Denton Drive Austin address; residential and commercial electrical service is explicit.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://www.bowneelectric.com/",
+          "observedAt": "2026-10-23T08:55:52.464058+00:00",
+          "sha256": "cc57fc33bc1505bfb2b16d5816248ace99092ea033276ae1e35c5688793597bf"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "be76f04e-eb42-5029-b710-f7ba726d5e43",
+      "name": "McCullough Heating, Air Conditioning & Plumbing",
+      "state": "TX",
+      "city": "Austin",
+      "msa": null,
+      "industries": [
+        "heating_cooling",
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512-280-0011",
+      "website": "https://coolmenow.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The addendum source and original agree on McCullough, coolmenow.com and 5122800011; the own site explicitly identifies an Austin heating/cooling and plumbing operator with local scheduling. Source association, broad service eligibility and Austin scope are supported.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://coolmenow.com/",
+          "observedAt": "2026-10-23T04:08:52.824382+00:00",
+          "sha256": "38b91d6abf397a5165fd7dc582bae2e7c982db1fec24b65ae79b818213c18b43"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "bebe835b-79d1-5a4e-b6ce-765f628188bd",
+      "name": "Pacific Architectural Metals LLC",
+      "state": "WA",
+      "city": "Seattle",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(206) 682-5354",
+      "website": "https://www.pacificarchitecturalmetals.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source-linked domain, Seattle identity and phone match a custom metal fabrication/laser-cutting shop offering residential and commercial work and quotes. No legal equivalence is needed for ordinary operating-company association.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.pacificarchitecturalmetals.com",
+          "observedAt": "2026-10-23T04:07:55.698992+00:00",
+          "sha256": "eb6f01cae62039160bd74cd545da8e037406da2e28793865a6421c0404e9222b"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "bf55e2b9-9592-51e9-998d-d5f86cf5257e",
+      "name": "St. Paul’s PACE San Diego",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "home_health_nonmedical_care"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(619) 677-3800",
+      "website": "https://www.stpaulspace.org/locations/pace-san-diego/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked local page, source phone and downtown San Diego PACE identity agree. Senior home care, care coordination and transportation fall within the personal-service ecosystem; medical services elsewhere in the program do not erase home-care eligibility.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.stpaulspace.org/locations/pace-san-diego/",
+          "observedAt": "2026-10-23T04:09:41.604116+00:00",
+          "sha256": "70d2631d77b0d26243b883543297625ca73820c66e48e89edc2be34fc7e116be"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "c723508f-4438-5302-96b7-a72a29aa6e12",
+      "name": "T.A. Marsh Roofing",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "roofing_remodeling"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(619) 333-1949",
+      "website": "https://www.tamarshroofing.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source-linked T.A. Marsh domain explicitly names the San Diego roofing operator and commercial, residential and industrial roofing scope. The shorter source Marsh name is supported by that specific source website and geography.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.tamarshroofing.com",
+          "observedAt": "2026-10-23T04:09:42.425607+00:00",
+          "sha256": "2935beaaf6bb4cb5aedaef6269a7869eb97118d00bdc243ea58e4101912f0f5e"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "c81cc32b-e846-5557-b855-1ac4fef6b9aa",
+      "name": "Schmidt Electric Company",
+      "state": "TX",
+      "city": "AUSTIN",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512.243.1450",
+      "website": "https://schmidt-electric.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The original's phone exactly matches the Austin contractor source and its company identity. Commercial offices, healthcare, manufacturing and facility maintenance establish broad commercial-building electrical eligibility. EMCOR branding is not used to collapse separate operating companies.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://schmidt-electric.com/",
+          "observedAt": "2026-10-23T08:55:54.098834+00:00",
+          "sha256": "fe955ba5c1cb86362cfaab6c5d635077cd374e35cddd2d83b79c9d3b14ac9538"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "d3794bef-c6f9-5ffa-a9cc-9a9ff48f0e85",
+      "name": "Monarch Home Health Agency",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "home_health_nonmedical_care"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": null,
+      "website": "https://monarchhh.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Unknown",
+        "reason": "The addendum source Monarch Home Health Services links monarchhh.com to San Diego. The retained original's Monarch home-health title has no phone, geography or delivered-service details, so ordinary source-to-local-operation association and service eligibility remain unresolved.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Unknown (exposed)",
+        "reason": "Exact source-linked monarchhh.com supports website association. New retained contact factual extract addresses patient/clinician/contracting enquiries and identifies Monarch Home Health but supplies no phone/address or substantive delivered home-care/service facts. It cannot identify the actual particular source operating company or resolve possible network/local organization distinctions. No different-owner or inactive conclusion.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://monarchhh.com",
+          "observedAt": "2026-10-23T04:09:43.827420+00:00",
+          "sha256": "97b4625d5a269361e9da85a70c5376336db7a7fa58f052ed1c3bc6879fa3de98"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "d48603bd-d83d-5c9e-9b96-40ed0712116e",
+      "name": "San Diego Short Term Rental Cleaning",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(858) 365-9910",
+      "website": "https://sdstrcleaning.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and phone match a San Diego short-term rental cleaning operator describing property turnover between guests. Serving property managers and vacation rentals remains eligible under broad building services.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://sdstrcleaning.com/",
+          "observedAt": "2026-10-23T04:30:02.304601+00:00",
+          "sha256": "6831e70b2da33e7bdaf415c754a233637ebc9526040dd93c57ef08789a82c1c0"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "d5c098ad-c064-53f4-9a9d-f947b7b940fe",
+      "name": "Ameri-Cal Repipe and Plumbing, Inc.",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "877.789.7786",
+      "website": "https://americalplumbing.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The addendum source company/domain and toll-free phone agree exactly with the retained Ameri-Cal plumbing/repipe original, supporting company association and eligible building services. The original does not locate an office in San Diego, so the source place cannot be treated as a resolved local branch.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://americalplumbing.com",
+          "observedAt": "2026-10-23T04:09:45.251664+00:00",
+          "sha256": "fb0a3ad55f91fd40955beea548ddcf8035be45337418673a13dd9a0463f40f96"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "db08e7f1-dc63-5af3-acbb-2dcc14fd66c2",
+      "name": "Heart Heating, Cooling, Plumbing & Electric",
+      "state": "CO",
+      "city": "Denver",
+      "msa": null,
+      "industries": [
+        "electrical",
+        "heating_cooling",
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(720) 372-2211",
+      "website": "https://servicebyheart.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked domain and phone match a home-services operator explicitly serving Denver and Colorado's Front Range. Heating, cooling, plumbing and electrical service plus scheduling establish eligible operations.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://servicebyheart.com/",
+          "observedAt": "2026-10-23T04:06:49.630451+00:00",
+          "sha256": "88083d4b2aaec007c5d81b17409f09f2c056892f6f9a2a2e867d61606c1d7165"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "dc14f790-1377-5ae8-a37a-835c58208e48",
+      "name": "Quantum Electric, Inc.",
+      "state": "TX",
+      "city": "ROUND ROCK",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(512) 246-1145",
+      "website": "https://quantum-electric.com/contact-us/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source phone and name match the Round Rock/Austin commercial electrical business, despite a different street address. Interior/exterior building electrics, construction and facilities maintenance are eligible under the broad scope.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "medium",
+        "workflowOpportunityLevel": "medium"
+      },
+      "sources": [
+        {
+          "url": "https://quantum-electric.com/contact-us/",
+          "observedAt": "2026-10-23T09:14:08.847674+00:00",
+          "sha256": "2089459d4fa1c6a8430bbefdfbbe5fa49e3ea8c18555ef672c9a2be53c928f0a"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_disclosed",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "dc177f5a-2357-58bf-8630-b9723b156f64",
+      "name": "Big Branch Tree Service Inc.",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "6193454621",
+      "website": "https://www.mybigbranchinc.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and phone match a tree/landscaping operator serving residential and commercial clients with explicit National City operations. This supports the San Diego-area business without proving its source Broadway address.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.mybigbranchinc.com/",
+          "observedAt": "2026-10-23T04:09:45.937100+00:00",
+          "sha256": "28769e5e68f3afad136c44028bcebaac6cd5d975fcd602d549a2a95a72ed341f"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "e603a6ab-5c6c-5a77-9fb2-8c77c1ca7ebf",
+      "name": "Nivtop Creations",
+      "state": "FL",
+      "city": "LUTZ",
+      "msa": null,
+      "industries": [
+        "landscaping_tree_grounds"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "(813)-382-6803",
+      "website": "https://nivtopcreations.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The source-only addendum matches Nivtop's exact domain and phone to the office-plant service original, supporting association. Rental, procurement and scheduled workplace plant maintenance are eligible commercial-building services. Lutz remains source geography rather than a demonstrated distinct local unit.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://nivtopcreations.com/",
+          "observedAt": "2026-10-23T04:27:49.800905+00:00",
+          "sha256": "2cb856e18195192919f4ab3fa3d8efc0a4c1ab675f2b3f90966a1b06230d372e"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "e646c379-4570-55f4-b0fc-edb3d675b5ba",
+      "name": "Ramona Mover",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "1-442-208-0313",
+      "website": "https://ramonamovers.com",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 0,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked domain and exact phone agree with a moving business offering residential and commercial moves. The retained excerpt does not state San Diego geography; company association is supported by phone, but a distinct San Diego operating unit is unresolved.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://ramonamovers.com",
+          "observedAt": "2026-10-23T04:09:49.395633+00:00",
+          "sha256": "cc57c90fe66b4f26ad45fac26057cae485f51432e6122e5f0b30299689fb0dae"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "eabb6cd0-189c-58ca-a0f3-ef7ef10cb611",
+      "name": "Incredible Plumbing",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "16199075840",
+      "website": "https://incredibleplumbing.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Exact source-linked domain and phone agree with explicitly San Diego plumbing and emergency-drain service, including private and business projects and service scheduling.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://incredibleplumbing.com/",
+          "observedAt": "2026-10-23T04:09:50.028989+00:00",
+          "sha256": "426c6b7753d7cf04e3cd0010827d8c62bd10498b6dd19807c3e050de30abfba0"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "ed9fc67f-e1d0-5b68-9262-5e596d0aac04",
+      "name": "American Plumbing Co.",
+      "state": "CA",
+      "city": "San Diego",
+      "msa": null,
+      "industries": [
+        "plumbing"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+16197131114",
+      "website": "https://plumbersandiegoonline.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The addendum source and original agree on the exact plumbing website, San Diego identity and source phone 6197231114 among the original numbers. Residential repairs and homeowner/apartment service establish eligible local operations.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://plumbersandiegoonline.com/",
+          "observedAt": "2026-10-23T04:09:51.217185+00:00",
+          "sha256": "c027bc012da0fd7628bc942a9f0b4289e71c19b932e96e74e9269f6214a27ba5"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed",
+        "named_contact_role": "not_searched"
+      }
+    },
+    {
+      "id": "fbdbdc68-1cd8-5698-ae56-ad9922f043b7",
+      "name": "360 Electrical Contractors, Inc.",
+      "state": "TX",
+      "city": "Pflugerville",
+      "msa": null,
+      "industries": [
+        "electrical"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "512-360-3532",
+      "website": "https://360electricalcontractors.com/contact",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 2,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Original source business name 360 ELECTRICAL CONTRACTORS INC and 5123603532 match quoted own-site name and 512-360-3532. Source Pflugerville business location supports local operating association; construction/pre-construction fits commercial-building eligibility.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://360electricalcontractors.com/contact",
+          "observedAt": "2026-10-23T04:58:02.808067+00:00",
+          "sha256": "38b4cb22a339b5ddec8c94af02c4d4c7fbe53b27a5a44bc1ef7601f1992ae033"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "fda01aa3-b830-5c34-926c-61a3409f685a",
+      "name": "Loyal Home Concierge",
+      "state": "TX",
+      "city": null,
+      "msa": null,
+      "industries": [
+        "restoration_moving_household_services"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "+1-512-994-0072",
+      "website": "https://loyalhomeconcierge.com/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 0,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "Source-linked domain and phone match a clearly Austin home-maintenance and management operator. The original explicitly describes outsourcing home maintenance and offers a discovery booking route.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://loyalhomeconcierge.com/",
+          "observedAt": "2026-10-23T04:09:03.149949+00:00",
+          "sha256": "c96208182c975bd184e93af3b4f8529efe7d55a6a6bc1e9c7cdda29b3cf412e7"
+        }
+      ],
+      "gaps": [
+        "city_unknown"
+      ],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    },
+    {
+      "id": "fdfd76e0-d63b-54ca-a924-13fdafdcfe05",
+      "name": "Window Genie of Thornton",
+      "state": "CO",
+      "city": "THORNTON",
+      "msa": null,
+      "industries": [
+        "cleaning_pest"
+      ],
+      "employees": null,
+      "annualRevenue": null,
+      "phone": "7205730196",
+      "website": "https://www.windowgenie.com/thornton/",
+      "verified": true,
+      "active": true,
+      "shortlistEligible": true,
+      "locationCount": 1,
+      "evidenceCount": 2,
+      "producerIdentity": {
+        "status": "verified_operating_company",
+        "selectionState": "roster",
+        "independent": false
+      },
+      "independentReview": {
+        "status": "Supported",
+        "reason": "The exact source-linked Thornton location page explicitly identifies the local exterior-cleaning operation and recurring home care. Scope is the Thornton service operation; the national franchise brand is not treated as a single local company.",
+        "reviewedAt": "2026-10-23T09:50:44Z",
+        "exposure": "blind"
+      },
+      "followUpReview": {
+        "status": "Grouping resolved (exposed)",
+        "reason": "Retained valid independent business-association group; all104 factual anchor screen found no new positive cross-record identity merge evidence. No legal-owner distinctness inferred.",
+        "exposure": "exposed"
+      },
+      "commercialSuitability": {
+        "status": "not_established",
+        "capacityLevel": "unknown",
+        "workflowOpportunityLevel": "unknown"
+      },
+      "sources": [
+        {
+          "url": "https://www.windowgenie.com/thornton/",
+          "observedAt": "2026-10-23T04:07:29.266164+00:00",
+          "sha256": "b7e947e8963815efec529ca37717ce978f443be6210fbc267cb8bb214d5e3cc6"
+        }
+      ],
+      "gaps": [],
+      "missingReasons": {
+        "owner": "not_searched",
+        "revenue": "not_disclosed",
+        "employees": "not_disclosed"
+      }
+    }
+  ]
+}
