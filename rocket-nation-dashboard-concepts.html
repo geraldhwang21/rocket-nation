@@ -262,6 +262,21 @@ table.stackable tr{border-top:1px solid var(--line);padding:6px 0}
 table.stackable th,table.stackable td{display:flex;justify-content:space-between;align-items:center;gap:12px;border:0;padding:4px 0;text-align:right;background:none;font-size:13px}
 table.stackable [data-label]::before{content:attr(data-label);font-weight:700;color:var(--muted);text-align:left}
 }
+
+/* The four role cards are links to working dashboards. */
+.gallery-prompt { margin: 0; font-size: 16px; font-weight: 700; }
+.gallery-role-card { position: relative; border: 2px solid #b8c3cb; padding-bottom: 22px; }
+.gallery-role-card:hover, .gallery-role-card:focus-visible {
+  border-color: var(--accent); background: var(--accent-soft);
+  box-shadow: 0 8px 20px rgba(23,26,32,.12);
+}
+.gallery-role-card .open {
+  display: inline-flex; align-items: center; gap: 12px;
+  min-height: 42px; padding: 8px 14px; border-radius: 5px;
+  background: var(--accent); color: #fff; font-size: 14px;
+}
+.gallery-role-card .open::after { content: "↗"; font-size: 20px; line-height: 1; }
+@media(max-width:700px) { .company-switch { margin-left: 0; } }
 </style>
 <link rel="stylesheet" href="fleet-map.css">
 <link rel="icon" type="image/svg+xml" href="assets/rn-mark.svg"></head>
@@ -766,15 +781,12 @@ table.stackable [data-label]::before{content:attr(data-label);font-weight:700;co
   'use strict';
   const data = JSON.parse(document.getElementById('rn-data').textContent);
   const manifest = JSON.parse(document.getElementById('rn-manifest').textContent);
-  const websiteContext = new URLSearchParams(location.search).get('site') === 'rocket-nation';
-  if (websiteContext) {
-    const navigation = document.querySelector('.topbar nav');
-    for (const [text, href] of [['Rocket Nation home', 'index.html#home'], ['Back to Rocket Nation Operations', 'index.html#operations']]) {
-      const link = document.createElement('a');
-      link.textContent = text;
-      link.setAttribute('href', href);
-      navigation.append(link);
-    }
+  const navigation = document.querySelector('.topbar nav');
+  for (const [text, href] of [['Rocket Nation home', 'index.html#home'], ['Back to Rocket Nation Operations', 'index.html#operations']]) {
+    const link = document.createElement('a');
+    link.textContent = text;
+    link.setAttribute('href', href);
+    navigation.append(link);
   }
   const topbar = document.querySelector('.topbar');
   const updateNavigationHeight = () => document.documentElement.style.setProperty('--nav-height', `${topbar.getBoundingClientRect().height + 8}px`);
@@ -894,11 +906,10 @@ table.stackable [data-label]::before{content:attr(data-label);font-weight:700;co
   const countWord = n => ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty'][n] || String(n);
   function gallery() {
     const s = states[galleryCompany]; const c = s.company; accent(c); main.className = `shell theme-${c.id}`;
-    main.innerHTML = `<div class="titlebar gallery-title"><div><h1>Rocket Nation raises client company value by increasing operational transparency for all stakeholders.</h1></div></div><div class="picker"><label class="pick" for="gallery-company">Company · choose one of ${countWord(data.companies.length).toLowerCase()}<span class="select-wrap"><select id="gallery-company">${data.companies.map(x => opt(x.id, x.name, x.id === galleryCompany)).join('')}</select></span></label><div class="company-switch" role="group" aria-label="Switch company">${data.companies.map(x => `<button type="button" class="company-chip" data-company="${x.id}" aria-pressed="${x.id === galleryCompany}">${logo(x.id, 22)}<span>${esc(x.name)}</span></button>`).join('')}</div></div><div class="brand gallery-brand">${logo(c.id, 72)}<div><h2>${esc(c.name)}</h2><p class="industry">${esc(c.industry)}</p></div></div><div class="gallery">${Object.entries(roles).map(([role, title]) => {
+    main.innerHTML = `<div class="titlebar gallery-title"><div><h1>Rocket Nation raises client company value by increasing operational transparency for all stakeholders.</h1></div></div><div class="picker"><p class="gallery-prompt">Choose one of four sample companies</p><div class="company-switch" role="group" aria-label="Switch company">${data.companies.map(x => `<button type="button" class="company-chip" data-company="${x.id}" aria-pressed="${x.id === galleryCompany}">${logo(x.id, 22)}<span>${esc(x.name)}</span></button>`).join('')}</div></div><div class="brand gallery-brand">${logo(c.id, 72)}<div><h2>${esc(c.name)}</h2><p class="industry">${esc(c.industry)}</p></div></div><div class="gallery">${Object.entries(roles).map(([role, title]) => {
       const card = manifest.dashboards.find(d => d.id === `${c.id}-${role}`);
-      return `<a class="card" id="card-${c.id}-${role}" href="#${c.id}-${role}"><h2 class="role-title">${title} view</h2><div class="value">${esc(cardValue(s, role))}</div><p>${esc(card.purpose)}.</p><span class="open">Open ${esc(title.toLowerCase())} dashboard</span></a>`;
+      return `<a class="card gallery-role-card" id="card-${c.id}-${role}" href="#${c.id}-${role}"><h2 class="role-title">${title} view</h2><div class="value">${esc(cardValue(s, role))}</div><p>${esc(card.purpose)}.</p><span class="open">Open ${esc(title.toLowerCase())} dashboard</span></a>`;
     }).join('')}</div><section class="value-case" aria-labelledby="value-case-title"><h2 id="value-case-title">Nobody pays a premium for a business that lives in the owner’s head.</h2><p>When owners sell to private equity or a roll-up, buyers price risk. Transparent operations and continuous monitoring prove the business runs without its founder, which lowers that risk and can add several turns to the multiple.</p><p class="value-case-close">Rocket Nation systematizes the business.</p></section>`;
-    document.getElementById('gallery-company').addEventListener('change', e => { galleryCompany = e.target.value; gallery(); document.getElementById('gallery-company').focus(); });
     main.querySelectorAll('.company-chip').forEach(chip => chip.addEventListener('click', () => { galleryCompany = chip.dataset.company; gallery(); main.querySelector(`.company-chip[data-company="${galleryCompany}"]`).focus(); }));
   }
   function overview() {
@@ -1444,5 +1455,135 @@ table.stackable [data-label]::before{content:attr(data-label);font-weight:700;co
   render();
 })();
 </script>
-</body>
+<script>/* Keep column labels visible while the document scrolls past a table.
+   Tables retain their existing horizontal scrolling on narrow screens. */
+(() => {
+  const bar = document.createElement("div");
+  bar.id = "sticky-table-header";
+  bar.setAttribute("aria-hidden", "true");
+  bar.inert = true;
+  Object.assign(bar.style, {
+    position: "fixed",
+    zIndex: "9",
+    overflow: "hidden",
+    pointerEvents: "none",
+    display: "none",
+    boxShadow: "0 5px 12px rgba(23, 26, 32, .16)",
+  });
+  document.body.append(bar);
+
+  let activeTable = null;
+  let frame = 0;
+
+  function topClearance() {
+    let top = 0;
+    for (const element of document.querySelectorAll(".document-header, .topbar, .controls")) {
+      const position = getComputedStyle(element).position;
+      const rect = element.getBoundingClientRect();
+      if ((position === "sticky" || position === "fixed") &&
+          rect.top <= top + 32 && rect.bottom > top) {
+        top = rect.bottom;
+      }
+    }
+    return Math.max(0, top);
+  }
+
+  function horizontalScroller(table) {
+    for (let node = table.parentElement; node && node !== document.body; node = node.parentElement) {
+      const overflow = getComputedStyle(node).overflowX;
+      if (overflow === "auto" || overflow === "scroll") return node;
+    }
+    return table;
+  }
+
+  function copyAppearance(from, to) {
+    const style = getComputedStyle(from);
+    for (const property of [
+      "background-color", "color", "font-family", "font-size", "font-weight",
+      "line-height", "letter-spacing", "text-align", "vertical-align",
+      "white-space", "padding", "border", "box-sizing",
+    ]) {
+      to.style.setProperty(property, style.getPropertyValue(property));
+    }
+  }
+
+  function buildHeader(table) {
+    bar.replaceChildren();
+    const originalHead = table.tHead;
+    const clone = table.cloneNode(false);
+    const copiedHead = originalHead.cloneNode(true);
+    clone.append(copiedHead);
+    clone.style.width = `${table.getBoundingClientRect().width}px`;
+    clone.style.tableLayout = "fixed";
+    clone.style.borderCollapse = getComputedStyle(table).borderCollapse;
+    clone.style.borderSpacing = getComputedStyle(table).borderSpacing;
+    clone.style.margin = "0";
+    const originalCells = originalHead.querySelectorAll("th, td");
+    const copiedCells = copiedHead.querySelectorAll("th, td");
+    originalCells.forEach((cell, index) => {
+      const copy = copiedCells[index];
+      copyAppearance(cell, copy);
+      copy.style.width = `${cell.getBoundingClientRect().width}px`;
+      copy.style.minWidth = copy.style.width;
+      copy.style.maxWidth = copy.style.width;
+    });
+    bar.append(clone);
+  }
+
+  function update() {
+    frame = 0;
+    const top = topClearance();
+    let candidate = null;
+    for (const table of document.querySelectorAll("table")) {
+      if (!table.tHead || !table.tHead.querySelector("th")) continue;
+      const head = table.tHead.getBoundingClientRect();
+      const body = table.getBoundingClientRect();
+      if (head.height && head.top < top && body.bottom > top + head.height) {
+        candidate = table;
+      }
+    }
+    if (!candidate) {
+      activeTable = null;
+      bar.style.display = "none";
+      return;
+    }
+    const scroller = horizontalScroller(candidate);
+    const viewport = scroller.getBoundingClientRect();
+    const left = Math.max(0, viewport.left);
+    const width = Math.min(window.innerWidth - left, viewport.right - left);
+    if (width <= 0) {
+      bar.style.display = "none";
+      return;
+    }
+    if (candidate !== activeTable ||
+        bar.firstElementChild?.getBoundingClientRect().width !== candidate.getBoundingClientRect().width) {
+      buildHeader(candidate);
+      activeTable = candidate;
+    }
+    bar.style.left = `${left}px`;
+    bar.style.top = `${top}px`;
+    bar.style.width = `${width}px`;
+    bar.style.height = `${candidate.tHead.getBoundingClientRect().height}px`;
+    bar.firstElementChild.style.marginLeft = `${scroller === candidate ? 0 : -scroller.scrollLeft}px`;
+    bar.style.display = "block";
+  }
+
+  function schedule() {
+    if (!frame) frame = requestAnimationFrame(update);
+  }
+
+  document.addEventListener("scroll", schedule, true);
+  document.addEventListener("click", schedule);
+  window.addEventListener("resize", () => {
+    activeTable = null;
+    schedule();
+  });
+  window.addEventListener("hashchange", schedule);
+  document.fonts?.ready.then(() => {
+    activeTable = null;
+    schedule();
+  });
+  schedule();
+})();
+</script></body>
 </html>

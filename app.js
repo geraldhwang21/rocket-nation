@@ -53,6 +53,17 @@ const segments = {
 };
 function renderSegment(key) {
   const s = segments[key];
+  const photo = {
+    hvac: ["assets/field-technician-revised.webp",
+      "A heating and cooling technician inspects a residential heat pump"],
+    plumbing: ["assets/plumbing-portrait-trade.webp",
+      "A plumber works on pipes beneath a residential kitchen sink"],
+    pest: ["assets/pest-control-portrait-trade.webp",
+      "A pest-control technician inspects a monitoring station by a home"],
+  }[key];
+  const image = document.querySelector("#segment-image");
+  image.src = photo[0];
+  image.alt = photo[1];
   document.querySelector("#segment-detail").innerHTML =
     `<p class="recommendation-label">${s.status}</p><h3>${s.title}</h3><p>${s.description}</p><dl class="segment-facts"><div><dt>Ideal customer</dt><dd>${s.customer}</dd></div><div><dt>Initial offer</dt><dd>${s.offer}</dd></div><div><dt>Why it could win</dt><dd>${s.why}</dd></div><div><dt>What could break it</dt><dd>${s.risk}</dd></div><div><dt>Next evidence</dt><dd>${s.test}</dd></div></dl>`;
   document

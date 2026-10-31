@@ -1,6 +1,6 @@
 # Rocket Nation website v0.9
 
-This repository is the static v0.9 website snapshot. GitHub Pages serves `index.html` from the `main` branch root. The public preview includes the complete 72,405-row calling list and its downloadable workbook. The older 100-record pilot remains a separate view; see [dataset provenance](DATA-PROVENANCE.md) for the overlap and exact frozen-data replay method.
+This repository is the static v0.9 website snapshot. GitHub Pages serves `index.html` from the `main` branch root. The public preview includes the complete 72,405-row calling list and its downloadable workbook. The 100-record reviewed pilot appears as a distinct view inside the Prospects workspace, with its separate review details and call-notes page. It is not a first-call list or a subset of the full calling list; see [dataset provenance](DATA-PROVENANCE.md) for the overlap and exact frozen-data replay method.
 
 ## Folder map
 

@@ -32,9 +32,18 @@
   const nameOrder = rows.map((_, index) => index).sort((a, b) =>
     rows[a][1].localeCompare(rows[b][1]) || rows[a][0].localeCompare(rows[b][0]));
   const state = {view: 'companies', page: 0, matches: []};
+  let pilotRecords = null;
+  let pilotError = null;
+  let pilotRequest = null;
+  const stateForCity = (label) => {
+    const knownCity = String(label).match(/,\s*([A-Z]{2})$/);
+    const unknownCity = String(label).match(/^([A-Z]{2}); BUSINESS CITY UNCONFIRMED$/);
+    return knownCity?.[1] || unknownCity?.[1] || '';
+  };
+  const cityState = new Map(data.cities.map(([label]) => [label, stateForCity(label)]));
   const params = new URLSearchParams(location.search);
-  if (['companies', 'trades', 'cities'].includes(params.get('view'))) state.view = params.get('view');
-  for (const id of ['query', 'city', 'trade', 'website-status', 'contact', 'sort']) {
+  if (['companies', 'trades', 'cities', 'pilot'].includes(params.get('view'))) state.view = params.get('view');
+  for (const id of ['query', 'trade', 'website-status', 'contact', 'sort']) {
     const value = params.get(id);
     if (value !== null && value.length <= 200) {
       const field = $(id);
@@ -55,15 +64,30 @@
     }
     list.append(fragment);
   }
-  addOptions('city-options', data.cities);
   addOptions('trade-options', data.trades);
-  const cityLabels = new Set(data.cities.map(([label]) => lower(label)));
   const tradeLabels = new Set(data.trades.map(([label]) => lower(label)));
+  for (const stateCode of [...new Set(cityState.values())].filter(Boolean).sort()) {
+    $('state').add(new Option(stateCode, stateCode));
+  }
+  if ([...$('state').options].some((option) => option.value === params.get('state'))) {
+    $('state').value = params.get('state');
+  }
+  function populateCities(preferred = $('city').value) {
+    const selectedState = $('state').value;
+    const entries = data.cities.map(([label]) => label)
+      .filter((label) => !selectedState || cityState.get(label) === selectedState)
+      .sort((a, b) => a.localeCompare(b));
+    $('city').replaceChildren(new Option('All', ''),
+      ...entries.map((label) => new Option(label, label)));
+    $('city').value = entries.includes(preferred) ? preferred : '';
+  }
+  populateCities(params.get('city') || '');
 
   function currentFilters() {
     return {
       query: lower($('query').value.trim()),
-      city: lower($('city').value.trim()),
+      state: $('state').value,
+      city: $('city').value,
       trade: lower($('trade').value.trim()),
       status: $('website-status').value,
       contact: $('contact').value,
@@ -72,8 +96,8 @@
   }
   function matchRow(row, index, filters) {
     if (filters.query && !searchable[index].includes(filters.query)) return false;
-    if (filters.city && !(cityLabels.has(filters.city)
-      ? lower(row[4]) === filters.city : lower(row[4]).includes(filters.city))) return false;
+    if (filters.state && cityState.get(row[4]) !== filters.state) return false;
+    if (filters.city && row[4] !== filters.city) return false;
     if (filters.trade && !(tradeLabels.has(filters.trade)
       ? lower(row[2]) === filters.trade : lower(row[2]).includes(filters.trade))) return false;
     if (filters.status && row[8] !== filters.status) return false;
@@ -119,10 +143,41 @@
     return `<table class="data-table group-table"><thead><tr><th class="company-col" scope="col">${title}</th><th scope="col" class="number">Companies</th><th scope="col" class="number">With website</th><th scope="col" class="number">With email</th></tr></thead><tbody>${groups.map(([label, item]) => `<tr><td><button type="button" class="group-button" data-group="${escape(field)}" data-label="${escape(label)}">${escape(label)}</button></td><td class="number">${number(item.count)}</td><td class="number">${number(item.websites)}</td><td class="number">${number(item.emails)}</td></tr>`).join('')}</tbody></table>`;
   }
 
+  function loadPilot() {
+    if (pilotRequest) return;
+    pilotRequest = fetch('prospect-data.json')
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then((payload) => {
+        if (payload.schemaVersion !== 1 || !Array.isArray(payload.records) ||
+            payload.records.length !== 100) throw new Error('Unexpected pilot data');
+        pilotRecords = payload.records.sort((a, b) => a.name.localeCompare(b.name));
+      })
+      .catch(() => { pilotError = 'The reviewed pilot could not be loaded. Reload the page to try again.'; })
+      .finally(() => { if (state.view === 'pilot') render(); });
+  }
+
+  function pilotTable(indices) {
+    return `<table class="data-table pilot-table"><thead><tr><th scope="col">Company</th><th scope="col">Industry</th><th scope="col">Location</th><th scope="col">Phone</th><th scope="col">Second review</th><th scope="col">Duplicate check</th></tr></thead><tbody>${indices.map((index) => {
+      const row = pilotRecords[index];
+      const industry = (row.industries || []).map((value) => value.replaceAll('_', ' ')).join(', ');
+      const place = [row.city, row.state].filter(Boolean).join(', ');
+      const phone = String(row.phone || '').replace(/\D/g, '');
+      const grouping = row.followUpReview?.status?.startsWith('Grouping resolved') ? 'Resolved' : 'Unknown';
+      return `<tr><td><button type="button" class="company-button" data-pilot-record="${index}">${escape(row.name)}</button></td><td>${escape(industry || 'Not recorded')}</td><td>${escape(place || 'Not recorded')}</td><td>${escape(phone ? formatPhone(phone) : 'Not recorded')}</td><td><span class="pilot-mobile-label">Second review: </span>${escape(row.independentReview?.status || 'Not reviewed')}</td><td><span class="pilot-mobile-label">Duplicate check: </span>${escape(grouping)}</td></tr>`;
+    }).join('')}</tbody></table>`;
+  }
+
   function syncUrl(filters) {
     const url = new URL(location.href);
     url.search = '';
     if (state.view !== 'companies') url.searchParams.set('view', state.view);
+    if (state.view === 'pilot') {
+      history.replaceState(null, '', url);
+      return;
+    }
     for (const [key, value] of Object.entries(filters)) {
       if (!value || (key === 'sort' && value === 'name')) continue;
       url.searchParams.set(key === 'status' ? 'website-status' : key, value);
@@ -131,6 +186,39 @@
   }
   function render() {
     const filters = currentFilters();
+    const pilotView = state.view === 'pilot';
+    $('filters').hidden = pilotView;
+    $('clear-filters').hidden = pilotView;
+    $('data-note').hidden = pilotView;
+    $('sort-control').hidden = pilotView;
+    $('pilot-context').hidden = !pilotView;
+    for (const button of document.querySelectorAll('[data-view]')) {
+      button.setAttribute('aria-pressed', String(button.dataset.view === state.view));
+    }
+    if (pilotView) {
+      syncUrl(filters);
+      if (!pilotRecords) {
+        resultNode.innerHTML = pilotError
+          ? `<p class="empty">${escape(pilotError)}</p>`
+          : '<p class="loading">Loading the 100-company reviewed pilot…</p>';
+        countNode.textContent = pilotError ? 'Pilot unavailable' : 'Loading reviewed pilot…';
+        $('page-status').textContent = '';
+        $('prev-page').disabled = true;
+        $('next-page').disabled = true;
+        if (!pilotError) loadPilot();
+        return;
+      }
+      const pages = Math.ceil(pilotRecords.length / pageSize);
+      state.page = Math.min(state.page, pages - 1);
+      const start = state.page * pageSize;
+      const visible = pilotRecords.map((_, index) => index).slice(start, start + pageSize);
+      resultNode.innerHTML = pilotTable(visible);
+      countNode.textContent = `${number(pilotRecords.length)} reviewed pilot companies · separate research sample`;
+      $('page-status').textContent = `${number(start + 1)}–${number(start + visible.length)} of ${number(pilotRecords.length)}`;
+      $('prev-page').disabled = state.page === 0;
+      $('next-page').disabled = state.page >= pages - 1;
+      return;
+    }
     state.matches = findMatches(filters);
     const allCount = state.matches.length;
     const groups = state.view === 'companies' ? null : groupTable(state.matches, state.view === 'trades' ? 2 : 4);
@@ -144,9 +232,8 @@
     $('page-status').textContent = total ? `${number(start + 1)}–${number(Math.min(start + pageSize, total))} of ${number(total)}` : 'No results';
     $('prev-page').disabled = state.page === 0;
     $('next-page').disabled = state.page >= pages - 1;
-    const active = [filters.query && `Search: ${filters.query}`, filters.city && `Location: ${filters.city}`, filters.trade && `Trade: ${filters.trade}`, filters.status && `Evidence: ${quality(filters.status)}`, filters.contact && `Contact: ${filters.contact}`].filter(Boolean);
+    const active = [filters.query && `Search: ${filters.query}`, filters.state && `State: ${filters.state}`, filters.city && `City: ${filters.city}`, filters.trade && `Trade: ${filters.trade}`, filters.status && `Evidence: ${quality(filters.status)}`, filters.contact && `Contact: ${filters.contact}`].filter(Boolean);
     $('filter-summary').textContent = active.length ? active.join(' · ') : 'Showing the complete calling list.';
-    for (const button of document.querySelectorAll('[data-view]')) button.setAttribute('aria-pressed', String(button.dataset.view === state.view));
     syncUrl(filters);
   }
 
@@ -168,12 +255,46 @@
     dialog.showModal();
   }
 
+  function showPilotRecord(index) {
+    const row = pilotRecords?.[index];
+    if (!row) return;
+    $('record-title').textContent = row.name;
+    const fields = [
+      ['Phone', row.phone || 'Not recorded'],
+      ['Location', [row.city, row.state].filter(Boolean).join(', ') || 'Not recorded'],
+      ['Industries', (row.industries || []).map((value) => value.replaceAll('_', ' ')).join(', ') || 'Not recorded'],
+      ['Metropolitan area', row.msa || 'Not recorded'],
+      ['Employees', row.employees ?? 'Not recorded'],
+      ['Annual revenue', row.annualRevenue ?? 'Not recorded'],
+      ['Website', row.website || 'Not recorded'],
+      ['Identity status', row.producerIdentity?.status || 'Not recorded'],
+      ['Locations', row.locationCount ?? 'Not recorded'],
+      ['Evidence items', row.evidenceCount ?? 'Not recorded'],
+      ['Commercial fit', row.commercialSuitability?.status || 'Not established'],
+    ];
+    const fieldHtml = fields.map(([label, value]) => {
+      const link = label === 'Website' ? safeUrl(value) : null;
+      return `<div><dt>${escape(label)}</dt><dd>${link ? `<a href="${escape(link)}" target="_blank" rel="noopener noreferrer">${escape(value)}</a>` : escape(value)}</dd></div>`;
+    }).join('');
+    const reviews = [
+      ['Independent review', row.independentReview],
+      ['Duplicate follow-up', row.followUpReview],
+    ].map(([label, review]) => `<section class="pilot-review"><h3>${escape(label)}: ${escape(review?.status || 'Not reviewed')}</h3><p>${escape(review?.reason || 'No reason recorded.')}</p></section>`).join('');
+    const sources = (row.sources || []).map((source) => {
+      const link = safeUrl(source.url);
+      return `<li>${link ? `<a href="${escape(link)}" target="_blank" rel="noopener noreferrer">${escape(source.url)}</a>` : escape(source.url || 'Source URL unavailable')} · observed ${escape(source.observedAt || 'date unknown')}</li>`;
+    }).join('');
+    $('record-details').innerHTML = `<p class="pilot-detail-note">Research evidence does not establish sales readiness or call priority. Outreach notes are in the full pilot workspace.</p><dl class="detail-grid">${fieldHtml}</dl>${reviews}<section class="pilot-review"><h3>Recorded sources</h3>${sources ? `<ul>${sources}</ul>` : '<p>No sources recorded.</p>'}</section><p class="pilot-detail-link"><a href="prospects.html">Open full pilot workspace for notes ↗</a></p>`;
+    dialog.showModal();
+  }
+
   $('close-dialog').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
   let updateTimer;
   $('filters').addEventListener('input', () => { clearTimeout(updateTimer); updateTimer = setTimeout(() => { state.page = 0; render(); }, 100); });
+  $('state').addEventListener('change', () => populateCities());
   $('filters').addEventListener('change', () => { clearTimeout(updateTimer); state.page = 0; render(); });
-  $('filters').addEventListener('reset', () => setTimeout(() => { state.page = 0; render(); }, 0));
+  $('filters').addEventListener('reset', () => setTimeout(() => { populateCities(''); state.page = 0; render(); }, 0));
   $('filters').addEventListener('submit', (event) => event.preventDefault());
   $('sort').addEventListener('change', () => { state.page = 0; render(); });
   $('prev-page').addEventListener('click', () => { state.page--; render(); resultNode.scrollTop = 0; });
@@ -187,6 +308,8 @@
   resultNode.addEventListener('click', (event) => {
     const record = event.target.closest('[data-record]');
     if (record) return showRecord(Number(record.dataset.record));
+    const pilotRecord = event.target.closest('[data-pilot-record]');
+    if (pilotRecord) return showPilotRecord(Number(pilotRecord.dataset.pilotRecord));
     const group = event.target.closest('[data-group]');
     if (!group) return;
     const value = group.dataset.label === '(blank)' ? '' : group.dataset.label;
