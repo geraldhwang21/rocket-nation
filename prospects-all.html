@@ -8,11 +8,11 @@
     <title>Prospects · Complete calling list · Rocket Nation</title>
     <link rel="icon" type="image/svg+xml" href="assets/rn-mark.svg" />
     <link rel="preload" href="assets/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="prospects-all.css?v=0.9r4" />
-    <script defer src="calling-list-data.js"></script>
-    <script defer src="calling-list-data-part2.js"></script>
-    <script defer src="calling-list-data-part3.js"></script>
-    <script defer src="prospects-all.js?v=0.9r4"></script>
+    <link rel="stylesheet" href="prospects-all.css?v=0.9r5" />
+    <script defer src="calling-list-data.js?v=0.9r5"></script>
+    <script defer src="calling-list-data-part2.js?v=0.9r5"></script>
+    <script defer src="calling-list-data-part3.js?v=0.9r5"></script>
+    <script defer src="prospects-all.js?v=0.9r5"></script>
   </head>
   <body>
     <a class="skip-link" href="#results">Skip to results</a>
@@ -22,12 +22,12 @@
     </header>
     <main>
       <section class="intro" aria-labelledby="page-title">
-        <div class="intro-copy"><p class="eyebrow">Rocket Nation / calling list v19</p><h1 id="page-title">The whole market,<br /><em>within reach.</em></h1><p class="intro-note">Search every company in the workbook. Narrow by location, trade, contact details, and website evidence.</p></div>
-        <div class="intro-side"><div class="hero-count"><strong id="total-count">72,405</strong><span>company records</span></div><a class="download-button" href="downloads/2026-10-30 Rocket Nation - full calling list v19.xlsx" download>Download complete Excel workbook <span aria-hidden="true">↓</span></a><p>Includes all company rows, plus trade and city summaries.</p></div>
+        <div class="intro-copy"><p class="eyebrow">Rocket Nation / calling list v20</p><h1 id="page-title">The whole market,<br /><em>within reach.</em></h1><p class="intro-note">Search every company in the workbook. Narrow by location, trade, contact details, and website evidence.</p></div>
+        <div class="intro-side"><div class="hero-count"><strong id="total-count">72,478</strong><span>company records</span></div><a class="download-button" href="downloads/2026-10-31 Rocket Nation - full calling list v20.xlsx" download>Download complete Excel workbook <span aria-hidden="true">↓</span></a><p>Includes all company rows, plus trade and city summaries.</p></div>
       </section>
 
       <section class="workspace" aria-label="Prospect workspace">
-        <div class="workspace-top"><div class="views" role="group" aria-label="Browse by"><button type="button" data-view="companies" aria-pressed="true">Companies <span>72,405</span></button><button type="button" data-view="trades" aria-pressed="false">Trades <span>2,120</span></button><button type="button" data-view="cities" aria-pressed="false">Cities <span>487</span></button></div><div class="workspace-actions"><button class="clear-button" id="clear-filters" type="reset" form="filters">Clear filters <span aria-hidden="true">↺</span></button><button class="pilot-link" type="button" data-view="pilot" aria-pressed="false">Reviewed pilot <span>100</span></button></div></div>
+        <div class="workspace-top"><div class="views" role="group" aria-label="Browse by"><button type="button" data-view="companies" aria-pressed="true">Companies <span>72,478</span></button><button type="button" data-view="trades" aria-pressed="false">Trades <span>2,134</span></button><button type="button" data-view="cities" aria-pressed="false">Cities <span>504</span></button></div><div class="workspace-actions"><button class="clear-button" id="clear-filters" type="reset" form="filters">Clear filters <span aria-hidden="true">↺</span></button></div></div>
 
         <form class="filters" id="filters" role="search" autocomplete="off">
           <div class="field search-field"><label for="query">Search</label><input id="query" name="query" type="search" placeholder="Company, phone, address, or keyword" /></div>
@@ -37,13 +37,12 @@
           <div class="field select-field"><label for="website-status">Website evidence</label><select id="website-status" name="status"><option value="">All evidence</option><option value="found">Found</option><option value="needs_review">Needs review</option><option value="unconfirmed">Unconfirmed</option><option value="none">No website</option></select></div>
           <div class="field select-field"><label for="contact">Contact details</label><select id="contact" name="contact"><option value="">Any</option><option value="website">Website</option><option value="email">Email</option><option value="both">Website + email</option></select></div>
         </form>
-        <div class="pilot-context" id="pilot-context" hidden><p><strong>100-company reviewed pilot.</strong> A second reviewer supported 94 company matches; six remain uncertain. A follow-up grouping check resolved 98; two remain uncertain. Commercial fit is not established for any. This separate sample is not a subset or call order for the 72,405-row workbook.</p><a href="prospects.html">Open full pilot details and call notes ↗</a></div>
         <div class="data-note" id="data-note"><p id="filter-summary" aria-live="polite">Showing the complete calling list.</p><details><summary>What do the website labels mean?</summary><p><b>Found</b> passed the data session's website checks. <b>Needs review</b> and <b>Unconfirmed</b> have a website that has not passed those checks. <b>No website</b> means none is recorded. These labels do not approve a company for sales.</p></details></div>
         <div class="result-head"><p id="result-count" role="status" aria-live="polite">Loading companies…</p><div class="result-actions" id="sort-control"><label for="sort">Sort</label><select id="sort"><option value="name">Company name</option><option value="city">City</option><option value="trade">Trade</option><option value="phone">Phone</option></select></div></div>
-        <section id="results" class="results" tabindex="-1" aria-label="Prospect results"><p class="loading">Preparing all 72,405 records…</p></section>
+        <section id="results" class="results" tabindex="-1" aria-label="Prospect results"><p class="loading">Preparing all 72,478 records…</p></section>
         <nav class="pagination" aria-label="Result pages"><button type="button" id="prev-page">Previous</button><span id="page-status"></span><button type="button" id="next-page">Next</button></nav>
       </section>
-      <footer class="footer"><p>Source: Rocket Nation calling list v19. Website evidence is separate from your review decisions.</p><p><a href="plan/market.html">← Business plan: Market and Customers</a></p></footer>
+      <footer class="footer"><p>Source: Rocket Nation calling list v20. Website evidence is separate from your review decisions.</p><p><a href="plan/market.html">← Business plan: Market and Customers</a></p></footer>
     </main>
     <dialog id="record-dialog" aria-labelledby="record-title"><div class="dialog-top"><div><p class="eyebrow">Company record</p><h2 id="record-title"></h2></div><button type="button" id="close-dialog" aria-label="Close company details">Close</button></div><div id="record-details"></div></dialog>
   </body>
