@@ -1,4 +1,5 @@
 import { planFields, planEconomics, validatePlanInputs } from "./model.js";
+import { printReport } from "./scenario-report.js";
 
 export const MODEL_VERSION = "rocket-nation-economics-2026-11-05";
 const STORAGE_KEY = "rocket-nation.economic-scenarios.v1";
@@ -39,134 +40,239 @@ export function validateSnapshot(value) {
 
 if (typeof document !== "undefined") initialize();
 function initialize() {
-  const form=document.querySelector("#economics-form");
-  const panel=document.querySelector("#saved-scenarios");
+  const form = document.querySelector("#economics-form");
+  const panel = document.querySelector("#saved-scenarios");
   if (!form || !panel) return;
-  const name=panel.querySelector("#scenario-name");
-  const notes=panel.querySelector("#scenario-notes");
-  const select=panel.querySelector("#scenario-open");
-  const status=panel.querySelector("#scenario-status");
-  const preview=panel.querySelector("#scenario-import-preview");
-  const original=panel.querySelector("#scenario-original");
-  let saved=[], active=null, pending=null, storageOK=true;
-  const say=(message)=>{status.textContent=message;};
+  const get = id => panel.querySelector(`#${id}`);
+  const name = get("scenario-name");
+  const notes = get("scenario-notes");
+  const select = get("scenario-open");
+  const status = get("scenario-status");
+  const stateLabel = get("scenario-save-state");
+  const preview = get("scenario-import-preview");
+  const original = get("scenario-original");
+  const duplicate = get("scenario-replace-choice");
+  let saved = [], invalidEntries = [], active = null, pending = null, pendingSave = null;
+  let cleanState = "", storageWritable = true, suppressDirty = false, activeStored = false;
+  const say = message => { status.textContent = message; };
+  const fieldsState = () => JSON.stringify({
+    inputs: planFields.map(({key}) => form.elements[key].value),
+    name: name.value, notes: notes.value,
+  });
+  const isDirty = () => fieldsState() !== cleanState;
+  function updateDirty() {
+    if (suppressDirty) return;
+    const changed = isDirty();
+    stateLabel.textContent = changed ? "Unsaved changes · not saved on this device" :
+      active ? (activeStored ? `Saved on this device: ${active.name}` : `Opened file: ${active.name} · not saved on this device`) : "Current calculation · not saved on this device";
+    stateLabel.dataset.state = changed ? "unsaved" : activeStored ? "saved" : "new";
+    if (pendingSave) { pendingSave = null; duplicate.hidden = true; say("Save prompt closed because the calculation changed. Choose Save on this device again when ready."); }
+  }
   function readInputs() {
-    return cleanInputs(Object.fromEntries(planFields.map(({key})=>[key,Number(form.elements[key].value)])));
+    return cleanInputs(Object.fromEntries(planFields.map(({key}) => [key, Number(form.elements[key].value)])));
   }
-  function persist(lastName) {
-    try {localStorage.setItem(STORAGE_KEY,JSON.stringify({scenarios:saved,lastOpened:lastName}));}
-    catch {storageOK=false;say("Browser saving is unavailable or full. Export a scenario file to keep a copy.");}
+  function loadCollection() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    const stored = raw ? JSON.parse(raw) : {scenarios: [], lastOpened: null};
+    if (!Array.isArray(stored.scenarios)) throw new Error("Saved calculations could not be read.");
+    invalidEntries = [];
+    const valid = [];
+    for (const entry of stored.scenarios) {
+      try { valid.push(validateSnapshot(entry)); }
+      catch { invalidEntries.push(entry); }
+    }
+    stored.scenarios = valid;
+    storageWritable = true;
+    return stored;
   }
-  function refresh() {
-    select.replaceChildren(new Option("Choose a saved scenario", ""));
-    saved.forEach((s,i)=>select.add(new Option(`${s.name} — ${new Date(s.savedAt).toLocaleString()}`,String(i))));
+  function syncCollection() {
+    try { saved = loadCollection().scenarios; }
+    catch { storageWritable = false; throw new Error("Saved device data could not be read. It has been preserved. Download a file to keep this calculation."); }
+  }
+  function persist(lastOpened) {
+    if (!storageWritable) return false;
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({scenarios: [...saved, ...invalidEntries], lastOpened}));
+      return true;
+    } catch {
+      say("This browser cannot save on this device. Download a calculation file to keep your work.");
+      return false;
+    }
+  }
+  function refresh(selectedName = activeStored ? active?.name : null) {
+    select.replaceChildren(new Option("Choose a calculation saved on this device", ""));
+    saved.forEach((snapshot, index) => {
+      const option = new Option(`${snapshot.name} — ${new Date(snapshot.savedAt).toLocaleString()}`, String(index));
+      option.selected = snapshot.name === selectedName;
+      select.add(option);
+    });
+    get("scenario-open-button").disabled = saved.length === 0;
+    get("scenario-empty").hidden = saved.length !== 0;
   }
   function showOriginal() {
-    original.hidden=!active;
+    original.hidden = !active;
     if (!active) return;
-    const p=active.results.projection;
-    panel.querySelector("#scenario-original-summary").textContent=
-      `${active.name}, saved ${new Date(active.savedAt).toLocaleString()} using ${active.modelVersion}. `+
-      `Recorded revenue: ${dollars(p.totalRevenue)}; cost: ${dollars(p.totalCost)}; ending cash: ${dollars(p.endingCash)}. `+
-      (active.modelVersion===MODEL_VERSION ? "Current results above use the same model version." :
-       "Model version differs. The calculator above has recalculated the inputs with the current model; the original analysis remains preserved here and in its export.");
+    const p = active.results.projection;
+    get("scenario-original-summary").textContent =
+      `${active.name}, saved ${new Date(active.savedAt).toLocaleString()} using ${active.modelVersion}. ` +
+      `Recorded revenue: ${dollars(p.totalRevenue)}; cost: ${dollars(p.totalCost)}; ending cash: ${dollars(p.endingCash)}. ` +
+      (active.modelVersion === MODEL_VERSION ? "These recorded results are preserved when you edit the current calculation." :
+        "This file uses an earlier model version. Current inputs have been recalculated with the current model. The original results remain available below.");
   }
-  function open(s) {
-    const next=validateSnapshot(s);
-    for (const {key} of planFields) form.elements[key].value=next.inputs[key];
-    form.dispatchEvent(new Event("input",{bubbles:true}));
-    name.value=next.name;notes.value=next.notes;active=next;showOriginal();
-    persist(next.name);say(`Opened ${next.name}. All editable inputs restored; current results recalculated. Original saved results retained.`);
+  function mayReplaceWorkingCalculation() {
+    return !isDirty() || confirm("Discard the unsaved changes in the current calculation and open another calculation?");
   }
-  function handle(action) {try {action();}catch(error){say(error.message);}}
-  panel.querySelector("#scenario-save").onclick=()=>handle(()=>{
-    if (!form.reportValidity()) return;
-    const snapshot=createSnapshot(name.value.trim(),notes.value,readInputs());
-    const index=saved.findIndex(s=>s.name===snapshot.name);
-    if (index>=0) {
-      if (confirm(`Replace the saved scenario “${snapshot.name}”? Choose Cancel to create a separate copy.`)) saved[index]=snapshot;
-      else {
-        let n=2;const stem=snapshot.name.slice(0,85);
-        while(saved.some(s=>s.name===`${stem} (copy ${n})`)) n++;
-        snapshot.name=`${stem} (copy ${n})`;saved.push(snapshot);
-      }
-    } else saved.push(snapshot);
-    active=snapshot;name.value=snapshot.name;refresh();showOriginal();persist(snapshot.name);
-    if(storageOK)say(`Saved ${snapshot.name} in this browser. Export a file for backup or another device.`);
-  });
-  panel.querySelector("#scenario-open-button").onclick=()=>handle(()=>{
-    if(select.value==="")throw new Error("Choose a saved scenario first.");open(saved[Number(select.value)]);
-  });
-  function exportFile(snapshot) {
-    const blob=new Blob([JSON.stringify(snapshot,null,2)],{type:"application/json"});
-    const url=URL.createObjectURL(blob);const link=document.createElement("a");
-    link.href=url;link.download=`Rocket Nation - ${snapshot.name.replace(/[^a-z0-9 _-]/gi,"-")}.json`;
-    link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  function open(snapshot, remember = true, storedOnDevice = true) {
+    const next = validateSnapshot(snapshot);
+    suppressDirty = true;
+    for (const {key} of planFields) form.elements[key].value = next.inputs[key];
+    form.dispatchEvent(new Event("input", {bubbles:true}));
+    name.value = next.name; notes.value = next.notes; active = next;
+    suppressDirty = false;
+    activeStored = storedOnDevice && (remember ? persist(next.name) : true);
+    cleanState = fieldsState(); updateDirty(); showOriginal(); refresh();
+    say(`Opened “${next.name}”. Inputs restored and current results recalculated; original saved results preserved.` +
+      (activeStored ? "" : " This file is not saved on this device. Choose Save on this device to keep it here."));
   }
-  panel.querySelector("#scenario-export").onclick=()=>handle(()=>{
-    if(!form.reportValidity())return;
-    exportFile(createSnapshot(name.value.trim(),notes.value,readInputs()));
-    say("Exported the current inputs and current calculated analysis.");
-  });
-  panel.querySelector("#scenario-export-original").onclick=()=>handle(()=>{if(active)exportFile(active);});
-  panel.querySelector("#scenario-import").onchange=async(event)=>{
-    pending=null;preview.hidden=true;const file=event.target.files[0];if(!file)return;
-    try {
-      if(file.size>MAX_BYTES)throw new Error("Choose a scenario file smaller than 2 MB.");
-      pending=validateSnapshot(JSON.parse(await file.text()));
-      panel.querySelector("#scenario-import-description").textContent=
-        `${pending.name} — saved ${new Date(pending.savedAt).toLocaleString()}, model ${pending.modelVersion}. Open to restore these inputs and recalculate with the current model. Original results will be retained.`;
-      preview.hidden=false;say("File validated. Review its name and date before opening.");
-    }catch(error){say(`Import rejected. Current inputs and saved scenarios are unchanged. ${error.message}`);}
-    event.target.value="";
-  };
-  panel.querySelector("#scenario-import-open").onclick=()=>handle(()=>{
-    if(!pending)return;
-    const snapshot=pending;
-    if(saved.some(s=>s.name===snapshot.name)) {
-      let n=2;const stem=snapshot.name.slice(0,80);
-      while(saved.some(s=>s.name===`${stem} (import ${n})`))n++;
-      snapshot.name=`${stem} (import ${n})`;
+  function handle(action) { try { action(); } catch (error) { say(error.message); } }
+  function snapshotForCurrent(requireName = false) {
+    if (!form.reportValidity()) return null;
+    if (requireName && !name.value.trim()) {
+      say("Give this calculation a name before saving on this device."); name.focus(); return null;
     }
-    saved.push(snapshot);refresh();open(snapshot);pending=null;preview.hidden=true;
+    return createSnapshot(name.value.trim() || "Current calculation", notes.value, readInputs());
+  }
+  function uniqueName(stem, suffix) {
+    let index = 2;
+    const short = stem.slice(0,80);
+    while (saved.some(s => s.name === `${short} (${suffix} ${index})`)) index++;
+    return `${short} (${suffix} ${index})`;
+  }
+  function saveSnapshot(snapshot, replace) {
+    // Read again immediately before writing so another tab's saves are retained.
+    syncCollection();
+    const index = saved.findIndex(s => s.name === snapshot.name);
+    if (index >= 0 && replace) saved[index] = snapshot;
+    else {
+      if (index >= 0) snapshot.name = uniqueName(snapshot.name, "copy");
+      saved.push(snapshot);
+    }
+    if (!persist(snapshot.name)) return;
+    active = snapshot; activeStored = true; name.value = snapshot.name;
+    pendingSave = null; duplicate.hidden = true;
+    cleanState = fieldsState(); updateDirty(); refresh(); showOriginal();
+    say(`Saved “${snapshot.name}” on this device in this browser. Download a calculation file for a portable copy.`);
+  }
+  get("scenario-save").onclick = () => handle(() => {
+    const snapshot = snapshotForCurrent(true); if (!snapshot) return;
+    syncCollection(); refresh();
+    if (saved.some(s => s.name === snapshot.name)) {
+      pendingSave = snapshot; duplicate.hidden = false;
+      get("scenario-replace-description").textContent = `“${snapshot.name}” is already saved on this device. Choose how to save these changes.`;
+      get("scenario-replace").focus();
+      return;
+    }
+    saveSnapshot(snapshot, false);
   });
-  panel.querySelector("#scenario-import-cancel").onclick=()=>{
-    pending=null;preview.hidden=true;say("Import cancelled. Current inputs and saved scenarios are unchanged.");
+  get("scenario-replace").onclick = () => handle(() => { if(pendingSave) saveSnapshot(pendingSave, true); });
+  get("scenario-save-copy").onclick = () => handle(() => { if(pendingSave) saveSnapshot(pendingSave, false); });
+  get("scenario-save-cancel").onclick = () => {
+    pendingSave = null; duplicate.hidden = true;
+    say("Save cancelled. Your calculation and previously saved versions are unchanged."); get("scenario-save").focus();
   };
-  panel.querySelector("#scenario-print").onclick=()=>handle(()=>{
-    if(!form.reportValidity())return;
-    printReport(createSnapshot(name.value.trim(),notes.value,readInputs()));
+  get("scenario-open-button").onclick = () => handle(() => {
+    if (select.value === "") throw new Error("Choose a calculation saved on this device first.");
+    const choice = saved[Number(select.value)];
+    if (!mayReplaceWorkingCalculation()) return;
+    syncCollection();
+    const latest = saved.find(s => s.name === choice.name);
+    if (!latest) throw new Error("That calculation changed in another tab. Choose it again from the refreshed list.");
+    open(latest);
   });
-  document.querySelector("#reset-economics").addEventListener("click",()=>{
-    active=null;original.hidden=true;name.value="";notes.value="";persist(null);say("Reset to Base. Your saved scenarios remain available.");
+  function download(snapshot) {
+    const blob = new Blob([JSON.stringify(snapshot, null, 2)], {type:"application/json"});
+    const url = URL.createObjectURL(blob); const link = document.createElement("a");
+    link.href = url;
+    link.download = `Rocket Nation - ${snapshot.name.replace(/[^a-z0-9 _-]/gi,"-")}.json`;
+    link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  get("scenario-export").onclick = () => handle(() => {
+    const snapshot = snapshotForCurrent(); if(!snapshot) return;
+    download(snapshot);
+    say("Calculation file downloaded (.json). Open it here or send it to someone using this calculator. Downloading does not save on this device.");
   });
+  get("scenario-export-original").onclick = () => handle(() => { if(active) download(active); });
+  get("scenario-print-original").onclick = () => handle(() => { if(active) printReport(active); });
+  get("scenario-import-button").onclick = () => get("scenario-import").click();
+  get("scenario-import").onchange = async event => {
+    pending = null; preview.hidden = true;
+    const file = event.target.files[0]; if(!file) return;
+    try {
+      if(file.size > MAX_BYTES) throw new Error("Choose a calculation file smaller than 2 MB.");
+      pending = validateSnapshot(JSON.parse(await file.text()));
+      get("scenario-import-description").textContent =
+        `“${pending.name}” — saved ${new Date(pending.savedAt).toLocaleString()}, model ${pending.modelVersion}. Opening restores its inputs and keeps its original results. It does not save a copy on this device; use Save on this device afterward if you want one.`;
+      preview.hidden = false;
+      say("Calculation file checked. Review its name and date, then choose Open this calculation or Cancel.");
+      get("scenario-import-open").focus();
+    } catch(error) { say(`File not opened. Current inputs and saved calculations are unchanged. ${error.message}`); }
+    event.target.value = "";
+  };
+  get("scenario-import-open").onclick = () => handle(() => {
+    if(!pending || !mayReplaceWorkingCalculation()) return;
+    const snapshot = validateSnapshot(pending);
+    open(snapshot, false, false);
+    pending = null; preview.hidden = true;
+  });
+  get("scenario-import-cancel").onclick = () => {
+    pending = null; preview.hidden = true;
+    say("File opening cancelled. Current inputs and saved calculations are unchanged."); get("scenario-import-button").focus();
+  };
+  get("scenario-print").onclick = () => handle(() => {
+    const snapshot = snapshotForCurrent(); if(snapshot) printReport(snapshot);
+  });
+  form.addEventListener("input", event => {
+    if(!suppressDirty && (event.target.closest("#economics-inputs") || event.target === form || event.target === name || event.target === notes)) updateDirty();
+  });
+  for(const button of document.querySelectorAll("[data-scenario]")) button.addEventListener("click", () => queueMicrotask(updateDirty));
+  const reset = document.querySelector("#reset-economics");
+  reset.addEventListener("click", event => {
+    if(isDirty() && !confirm("Discard the unsaved changes and reset to Base assumptions?")) {
+      event.preventDefault(); event.stopImmediatePropagation(); return;
+    }
+  }, true);
+  reset.addEventListener("click", () => queueMicrotask(() => {
+    active = null; activeStored = false; original.hidden = true; name.value = ""; notes.value = "";
+    cleanState = fieldsState(); updateDirty();
+    let storageMessage = "";
+    try {
+      syncCollection();
+      if(!persist(null)) storageMessage = " Device storage could not be updated; download a calculation file to keep your work.";
+    } catch(error) { storageMessage = " " + error.message; }
+    say("Reset to Base. Previously saved calculations remain available." + storageMessage);
+  }));
+  window.addEventListener("storage", event => {
+    if(event.key !== STORAGE_KEY) return;
+    try {
+      saved = loadCollection().scenarios; refresh();
+      say("Saved calculations changed in another tab. The list is refreshed; your current inputs are unchanged." +
+        (invalidEntries.length ? " Some unreadable entries are preserved but cannot be opened." : ""));
+    } catch {storageWritable = false; say("Saved calculations changed in another tab and could not be read. Your current inputs are unchanged; download a file to keep them.");}
+  });
+  window.addEventListener("beforeunload", event => {
+    if(isDirty()) {event.preventDefault(); event.returnValue = "";}
+  });
+  cleanState = fieldsState();
   try {
-    const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{"scenarios":[]}');
-    if(!Array.isArray(state.scenarios))throw new Error("Invalid saved collection.");
-    saved=state.scenarios.map(validateSnapshot);refresh();
-    const last=saved.find(s=>s.name===state.lastOpened);if(last)open(last);
-  }catch {say("Saved browser data could not be read. It has been left in place. You can import an exported backup.");}
+    const stored = loadCollection(); saved = stored.scenarios; refresh();
+    const last = saved.find(s => s.name === stored.lastOpened);
+    if(last) open(last, false); else updateDirty();
+    if(invalidEntries.length) say("Some saved entries could not be opened. Valid calculations remain available; unreadable entries are preserved unchanged when you save.");
+  } catch {
+    storageWritable = false; updateDirty();
+    say("Saved browser data could not be read and has been preserved. Download your current calculation or open a calculation file.");
+  }
 }
-function dollars(n){return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n);}
-function printReport(s) {
-  const win=window.open("", "_blank");
-  if(!win)throw new Error("Allow the report window to open, then try Print report again.");
-  const doc=win.document;
-  doc.title=`Rocket Nation — ${s.name}`;
-  const style=doc.createElement("style");style.textContent="body{font:15px system-ui;max-width:1000px;margin:32px auto;padding:16px}table{border-collapse:collapse;width:100%;font-size:12px}td,th{border:1px solid #bbb;padding:6px;text-align:right}th:first-child{text-align:left}svg{width:100%;height:220px}tr{break-inside:avoid}@media print{button{display:none}thead{display:table-header-group}}";doc.head.append(style);
-  function text(tag,value,parent=doc.body){const el=doc.createElement(tag);el.textContent=value;parent.append(el);return el;}
-  text("h1",s.name);text("p",`Rocket Nation planning analysis · ${s.savedAt} · ${s.modelVersion}`);
-  text("p",s.notes);text("p","Planning assumptions, not observed results. Cash search is limited to 240 modeled months. Staffing steps can cause losses above the first profitable client count.");
-  const p=s.results.projection;text("p",`Total revenue ${dollars(p.totalRevenue)} · Total cost ${dollars(p.totalCost)} · Ending cash ${dollars(p.endingCash)}`);
-  text("h2","Assumptions");const assumptions=doc.createElement("table");doc.body.append(assumptions);
-  for(const f of planFields){const row=assumptions.insertRow();row.insertCell().textContent=f.label;row.insertCell().textContent=String(s.inputs[f.key]);}
-  text("h2","Cumulative cash (US dollars)");
-  const svg=doc.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 900 220");svg.setAttribute("role","img");svg.setAttribute("aria-label","Cumulative cash over the selected monthly horizon");
-  const values=p.rows.map(r=>r.cumulativeCash);const lo=Math.min(0,...values),hi=Math.max(0,...values),range=hi-lo||1;
-  const line=doc.createElementNS(svg.namespaceURI,"polyline");line.setAttribute("points",values.map((v,i)=>`${20+i*860/Math.max(1,values.length-1)},${190-(v-lo)*170/range}`).join(" "));line.setAttribute("fill","none");line.setAttribute("stroke","#125b8e");line.setAttribute("stroke-width","3");svg.append(line);doc.body.append(svg);
-  text("p",`Cash range ${dollars(lo)} to ${dollars(hi)}; month 1 to ${p.rows.length}. Exact values follow.`);
-  text("h2","Monthly projection");const table=doc.createElement("table");doc.body.append(table);const head=table.createTHead().insertRow();
-  for(const label of ["Month","Closing clients","Revenue","Total cost","Operating profit","Cumulative cash"]){const th=doc.createElement("th");th.textContent=label;head.append(th);}
-  const body=table.createTBody();for(const row of p.rows){const tr=body.insertRow();for(const v of [row.month,row.closingClients.toFixed(2),dollars(row.revenue),dollars(row.totalCost),dollars(row.operatingProfit),dollars(row.cumulativeCash)])tr.insertCell().textContent=String(v);}
-  const button=text("button","Print / Save as PDF");button.onclick=()=>win.print();
+function dollars(value) {
+  return new Intl.NumberFormat("en-US", {style:"currency",currency:"USD",maximumFractionDigits:0}).format(value);
 }

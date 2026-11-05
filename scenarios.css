@@ -1,9 +1,35 @@
-.saved-scenarios {margin:1.5rem 0;padding:1.25rem;border:1px solid var(--line,#ccc);border-radius:8px}
-.saved-scenarios h3 {margin-top:0}
-.saved-scenarios label {display:block;margin:.75rem 0}
-.saved-scenarios input,.saved-scenarios textarea,.saved-scenarios select {display:block;width:100%;box-sizing:border-box;max-width:100%;font:inherit;padding:.6rem;margin-top:.3rem;color:inherit;background:var(--paper,#fff);border:1px solid #888;border-radius:4px}
-.saved-scenarios textarea {min-height:5rem}
-.scenario-actions {display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0}
-.saved-scenarios button {font:inherit;min-height:44px;padding:.5rem .8rem;cursor:pointer}
-.saved-scenarios [role=status] {min-height:1.5em}
-#scenario-import-preview {padding:1rem;border:1px solid #888}
+.saved-scenarios {margin:1.5rem 0;padding:1.25rem;border:1px solid #d9d9d4;border-radius:8px;background:#fafaf8;color:#202321;min-width:0}
+.saved-scenarios h3 {margin:0 0 .6rem;font-size:1.25rem;letter-spacing:-.025em;line-height:1.2}
+.saved-scenarios .scenario-save-state {font-size:.78rem;font-weight:650;line-height:1.5;margin:0 0 1rem;color:#555c57}
+.saved-scenarios .scenario-save-state[data-state="unsaved"] {color:#865d19}
+.saved-scenarios .scenario-intro {font-size:.87rem;line-height:1.55;margin:0 0 1.25rem}
+.saved-scenarios label,.saved-scenarios .scenario-label {display:block;font-size:.82rem;font-weight:650;margin:.8rem 0 .4rem;line-height:1.5}
+.saved-scenarios .scenario-optional {font-weight:400;color:#58605a}
+.saved-scenarios input:not([hidden]),.saved-scenarios textarea,.saved-scenarios select {display:block;width:100%;box-sizing:border-box;max-width:100%;font:inherit;font-size:.88rem;padding:.65rem;margin-top:.3rem;color:#202321;background:#fff;border:1px solid #929b94;border-radius:4px;min-height:44px}
+.saved-scenarios textarea {min-height:6rem;resize:vertical}
+.saved-scenarios summary {cursor:pointer;font-size:.85rem;font-weight:600;line-height:1.6;padding:.65rem 0;min-height:44px;box-sizing:border-box}
+.saved-scenarios .scenario-notes {border:0;margin:.35rem 0 .75rem;padding:0}
+.saved-scenarios .scenario-actions {display:flex;flex-wrap:wrap;gap:.55rem;margin:.85rem 0}
+.saved-scenarios button {font:inherit;font-size:.8rem;line-height:1.4;font-weight:600;min-height:44px;padding:.65rem .85rem;cursor:pointer;border:1px solid #8e9690;border-radius:4px;background:#fff;color:#242b26;white-space:normal;text-align:center}
+.saved-scenarios button.scenario-primary {background:#28342d;color:#fff;border-color:#28342d}
+.saved-scenarios button:hover {background:#eef0eb}
+.saved-scenarios button.scenario-primary:hover {background:#3b4a40}
+.saved-scenarios button:disabled {color:#717771;background:#efefec;cursor:default}
+.saved-scenarios :is(button,input,textarea,select,summary):focus-visible {outline:3px solid #377495;outline-offset:3px}
+.saved-scenarios .scenario-help {font-size:.76rem;line-height:1.55;color:#535c55;margin:.5rem 0 1rem}
+.saved-scenarios .scenario-open-section,.saved-scenarios .scenario-history {border:0;border-top:1px solid #d9d9d4;padding:.5rem 0 0;margin-top:1rem}
+.saved-scenarios .scenario-open-group + .scenario-open-group {border-top:1px solid #e1e4dd;margin-top:1rem;padding-top:.5rem}
+.saved-scenarios .scenario-choice {padding:1rem;background:#f0f2ec;border:1px solid #9aa795;border-radius:4px;margin:1rem 0}
+.saved-scenarios .scenario-choice p,.saved-scenarios .scenario-history p {font-size:.82rem;line-height:1.6;overflow-wrap:anywhere}
+.saved-scenarios .scenario-status {font-size:.82rem;line-height:1.6;min-height:1.5em;margin:1rem 0 0;overflow-wrap:anywhere}
+.saved-scenarios [hidden] {display:none!important}
+@media (max-width:600px) {.saved-scenarios {padding:1rem}.saved-scenarios .scenario-actions {display:grid;grid-template-columns:1fr}.saved-scenarios button {width:100%}.saved-scenarios .scenario-optional {display:block}}
+
+/* Long cash-recovery labels must remain readable at phone widths. */
+#economics .economics-headline dd {min-width:0;max-width:100%;overflow-wrap:anywhere;white-space:normal}
+@media (max-width:640px) {
+  #economics .economics-headline > div {display:block;padding:1rem 0;border-top:1px solid #d9d9d4}
+  #economics .economics-headline dt {min-height:0;line-height:1.45}
+  #economics .economics-headline dd {text-align:left;font-size:clamp(21px,6vw,26px);line-height:1.2;margin-top:.4rem}
+  #economics .economics-headline dd.econ-note {font-size:14px;line-height:1.5;margin-top:.5rem}
+}

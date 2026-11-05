@@ -406,17 +406,21 @@
             </p>
             <div id="economics-inputs"></div>
 <section id="saved-scenarios" class="saved-scenarios" aria-labelledby="saved-scenarios-title">
-<h3 id="saved-scenarios-title">Save and compare scenarios</h3>
-<p>Saved scenarios stay in this browser at this website address. Export a file for backup, another device or a colleague.</p>
-<label>Scenario name<input id="scenario-name" maxlength="100" autocomplete="off" /></label>
-<label>Notes (optional)<textarea id="scenario-notes" maxlength="2000"></textarea></label>
-<div class="scenario-actions"><button type="button" id="scenario-save">Save scenario</button><button type="button" id="scenario-export">Export current scenario</button><button type="button" id="scenario-print">Print report</button></div>
-<label>Saved scenarios<select id="scenario-open"><option value="">Choose a saved scenario</option></select></label>
-<button type="button" id="scenario-open-button">Open scenario</button>
-<label>Import a scenario file<input type="file" id="scenario-import" accept=".json,application/json" /></label>
-<div id="scenario-import-preview" hidden><p id="scenario-import-description"></p><div class="scenario-actions"><button type="button" id="scenario-import-open">Open imported scenario</button><button type="button" id="scenario-import-cancel">Cancel import</button></div></div>
-<details id="scenario-original" hidden><summary>Original saved analysis</summary><p id="scenario-original-summary"></p><button type="button" id="scenario-export-original">Export original saved analysis</button></details>
-<p id="scenario-status" role="status" aria-live="polite"></p>
+  <div class="scenario-heading"><h3 id="saved-scenarios-title">Keep this calculation</h3><p id="scenario-save-state" class="scenario-save-state" role="status">Current calculation · not saved on this device</p></div>
+  <p class="scenario-intro">Save here for your next visit, download a file to share or keep elsewhere, or make a report.</p>
+  <label for="scenario-name">Calculation name <span class="scenario-optional">(needed only to save on this device)</span></label>
+  <input id="scenario-name" maxlength="100" autocomplete="off" placeholder="For example: Austin paid test" />
+  <details class="scenario-notes"><summary>Add notes (optional)</summary><label for="scenario-notes">Notes for this calculation</label><textarea id="scenario-notes" maxlength="2000"></textarea></details>
+  <div class="scenario-actions"><button type="button" id="scenario-save" class="scenario-primary">Save on this device</button><button type="button" id="scenario-export">Download calculation file</button><button type="button" id="scenario-print">Print / Save PDF</button></div>
+  <p class="scenario-help">Device saves stay in this browser at this website address. A downloaded .json file can be opened here on another device. Neither option shares data automatically.</p>
+  <div id="scenario-replace-choice" class="scenario-choice" hidden><p id="scenario-replace-description"></p><div class="scenario-actions"><button type="button" id="scenario-replace">Replace saved version</button><button type="button" id="scenario-save-copy">Save a new copy</button><button type="button" id="scenario-save-cancel">Cancel</button></div></div>
+  <details class="scenario-open-section"><summary>Open a previous calculation</summary>
+    <div class="scenario-open-group"><label for="scenario-open">Saved on this device</label><select id="scenario-open"><option value="">Choose a calculation saved on this device</option></select><p id="scenario-empty" class="scenario-help">No calculations saved in this browser yet.</p><button type="button" id="scenario-open-button">Open saved calculation</button></div>
+    <div class="scenario-open-group"><p class="scenario-label">From a downloaded file</p><button type="button" id="scenario-import-button">Open calculation file</button><input type="file" id="scenario-import" accept=".json,application/json" hidden /><p class="scenario-help">Choose a Rocket Nation calculation file (.json). You can review it before opening.</p></div>
+    <div id="scenario-import-preview" class="scenario-choice" hidden><p id="scenario-import-description"></p><div class="scenario-actions"><button type="button" id="scenario-import-open">Open this calculation</button><button type="button" id="scenario-import-cancel">Cancel</button></div></div>
+  </details>
+  <details id="scenario-original" class="scenario-history" hidden><summary>Original saved results</summary><p id="scenario-original-summary"></p><div class="scenario-actions"><button type="button" id="scenario-export-original">Download original calculation file</button><button type="button" id="scenario-print-original">Report original saved results</button></div></details>
+  <p id="scenario-status" class="scenario-status" role="status" aria-live="polite"></p>
 </section>
             <button class="text-link" id="reset-economics" type="button">
               Reset to base assumptions
@@ -430,7 +434,7 @@
           <div class="economics-results" data-ui>
             <dl class="economics-headline">
               <div>
-                <dt>Most cash invested</dt>
+                <dt>Largest cash deficit</dt>
                 <dd id="peak-cash"></dd>
                 <dd class="econ-note" id="peak-cash-note"></dd>
               </div>
@@ -625,7 +629,7 @@
                 above this first crossing; it is not a sustained threshold.
               </li>
               <li>
-                Most cash invested = the lowest observed point of cumulative cash,
+                Largest cash deficit = the lowest observed point of cumulative cash,
                 including the launch cost. The plan is run forward up to 240
                 months to find it, so it can fall after the months shown. All
                 cash back by = the month cumulative cash turns positive and
@@ -635,8 +639,8 @@
               </li>
               <li>
                 Cash recovered by the final month = cumulative cash in that
-                month minus its lowest point, shown against the most cash
-                invested. Annual operating profit at the final month's pace =
+                month minus its lowest point, shown against the largest cash
+                deficit. Annual operating profit at the final month's pace =
                 that month's operating profit × 12.
               </li>
               <li>
