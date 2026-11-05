@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "researchDate": "2026-10-22",
   "currency": "USD",
-  "status": "Illustrative assumptions; no actual operating data, prices paid, wages, CAC or churn validated",
+  "status": "Earlier planning case retained for comparison; not the current homepage calculator Base or its input export. Do not combine these inputs or results with that calculator. No actual operating data, prices paid, wages, customer-acquisition cost or churn validated.",
   "units": {
     "revenue": "USD/client/month",
     "productiveHours": "hours/client/month",

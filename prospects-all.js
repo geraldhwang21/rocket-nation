@@ -4,7 +4,7 @@
   const data = window.RN_CALLING_LIST;
   const resultNode = document.getElementById('results');
   const countNode = document.getElementById('result-count');
-  if (!data || data.schemaVersion !== 1 || data.rows?.length !== 72478 ||
+  if (!data || data.schemaVersion !== 1 || data.rows?.length !== 72270 ||
       data.columns?.join(',') !== 'phone,name,trade,address,city,website,email,website_source,status') {
     resultNode.innerHTML = '<p class="empty">The complete calling list could not be loaded. Reload the page and try again.</p>';
     countNode.textContent = 'Data unavailable';

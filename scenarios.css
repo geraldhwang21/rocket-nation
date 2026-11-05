@@ -1,0 +1,9 @@
+.saved-scenarios {margin:1.5rem 0;padding:1.25rem;border:1px solid var(--line,#ccc);border-radius:8px}
+.saved-scenarios h3 {margin-top:0}
+.saved-scenarios label {display:block;margin:.75rem 0}
+.saved-scenarios input,.saved-scenarios textarea,.saved-scenarios select {display:block;width:100%;box-sizing:border-box;max-width:100%;font:inherit;padding:.6rem;margin-top:.3rem;color:inherit;background:var(--paper,#fff);border:1px solid #888;border-radius:4px}
+.saved-scenarios textarea {min-height:5rem}
+.scenario-actions {display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0}
+.saved-scenarios button {font:inherit;min-height:44px;padding:.5rem .8rem;cursor:pointer}
+.saved-scenarios [role=status] {min-height:1.5em}
+#scenario-import-preview {padding:1rem;border:1px solid #888}

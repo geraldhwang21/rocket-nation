@@ -2799,3 +2799,112 @@ footer > div a {
     width: min(310px, calc(100% - 2 * var(--margin)));
   }
 }
+
+/* Two acquisition routes, with a static Reel concept in the chapter whitespace. */
+.document-content > #social-acquisition {
+  max-width: none;
+  margin: 36px 0;
+  scroll-margin-top: 100px;
+}
+.acquisition-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 750px) minmax(220px, 260px);
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 24px;
+  align-items: start;
+}
+.acquisition-copy { grid-column: 1; min-width: 0; }
+.acquisition-copy h2, .acquisition-copy h3 { margin: 0 0 12px; }
+.acquisition-copy h2 { font-size: clamp(28px, 3vw, 38px); }
+.acquisition-copy h3 { font-size: 23px; }
+.acquisition-copy p { margin: 0; }
+.reel-placeholder {
+  grid-column: 2;
+  grid-row: 2 / span 4;
+  width: 100%;
+  max-width: 260px;
+  margin: 0;
+}
+.reel-placeholder figcaption { margin-bottom: 12px; font-weight: 700; }
+.reel-placeholder figcaption span {
+  display: block;
+  color: #4b5260;
+  font-size: 14px;
+  font-weight: 400;
+}
+.reel-frame {
+  aspect-ratio: 9 / 16;
+  border: 1px solid #171a20;
+  background: #f4f4f4;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.reel-kicker { font-size: 13px; line-height: 1.4; }
+.reel-frame .reel-hook {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 20px 0;
+}
+.reel-frame .reel-story { font-size: 16px; line-height: 1.4; margin: 0 0 20px; }
+.reel-frame .reel-cta { font-size: 15px; line-height: 1.4; margin: 0; font-weight: 700; }
+.reel-placeholder .reel-caption { font-size: 14px; line-height: 1.5; margin: 12px 0 0; }
+.acquisition-rules { border-top: 1px solid #b7bbc4; padding-top: 16px; }
+.acquisition-rules summary { cursor: pointer; font-weight: 700; padding: 6px 0; }
+.acquisition-rules summary:focus-visible { outline: 2px solid #164dcc; outline-offset: 4px; }
+.acquisition-rules[open] summary { margin-bottom: 12px; }
+@media (max-width: 1000px) {
+  .acquisition-layout { grid-template-columns: minmax(0, 750px); }
+  .acquisition-copy, .reel-placeholder { grid-column: 1; grid-row: auto; }
+}
+
+/* Align the Reel with the opening marketing paragraph. */
+.document-content > #marketing-opening { max-width: none; }
+.marketing-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 750px) minmax(220px, 260px);
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 24px;
+  align-items: start;
+}
+.marketing-opening > p, .marketing-opening > .social-acquisition {
+  grid-column: 1;
+  margin: 0;
+  min-width: 0;
+}
+.marketing-opening > .reel-placeholder { grid-column: 2; grid-row: 1 / span 3; }
+.marketing-opening .acquisition-layout { display: block; }
+.marketing-opening .acquisition-copy { margin-bottom: 24px; }
+.marketing-opening .acquisition-rules { margin-bottom: 0; }
+@media (max-width: 1000px) {
+  .marketing-opening { grid-template-columns: minmax(0, 750px); }
+  .marketing-opening > .reel-placeholder { grid-column: 1; grid-row: auto; }
+}
+
+.reel-video { display:block; width:100%; height:auto; aspect-ratio:9/16; background:#111; border-radius:12px; }
+.reel-transcript { margin-top:12px; font-size:14px; }
+.reel-transcript summary { cursor:pointer; padding:8px 0; }
+
+
+/* Landing content aligns to the lettering and the action row. */
+.hero:has(.hero-layout) { min-height:820px; }
+.hero-layout { position:relative; display:grid; grid-template-columns:minmax(0,1fr) clamp(220px,20vw,270px); gap:clamp(28px,4vw,64px); width:calc(50% + 300px - var(--margin)); margin-left:var(--margin); padding:112px 0 180px; align-items:start; }
+.hero-layout .hero-copy { padding:0; align-items:flex-start; text-align:left; --logo-w:min(100%,600px); }
+.hero-layout .hero-copy h1 { width:100%; margin-top:52px; }
+.hero-layout .hero-copy .hero-logo { max-width:100%; }
+.hero-layout .hero-deck { max-width:100%; }
+.hero:has(.hero-layout) .hero-internal-notice { position:static; margin:0 0 0 calc(min(100%, 600px) * .132); width:86.8%; max-width:380px; }
+.landing-reel { margin:0; min-width:0; }
+.landing-reel .reel-video { box-shadow:0 12px 35px #0005; }
+@media (max-width:760px) {
+ .hero:has(.hero-layout) { height:auto; min-height:0; max-height:none; }
+ .hero-layout { grid-template-columns:minmax(0,1fr); width:auto; margin:0; padding:132px var(--margin) 32px; gap:28px; }
+ .hero-layout .hero-copy { padding:0; --logo-w:min(100%,440px); }
+ .hero-layout .hero-copy h1 { margin-top:32px; }
+ .hero:has(.hero-layout) .hero-internal-notice { padding:11px 14px; font-size:14px; }
+ .landing-reel { width:min(240px,100%); justify-self:end; }
+ .hero:has(.hero-layout) .hero-bottom { position:relative; bottom:auto; left:auto; right:auto; padding:0 var(--margin) 28px; }
+}

@@ -473,14 +473,14 @@ function updateEconomics() {
     plan.peakCashNeed === 0
       ? "No cash needed"
       : plan.peakCashFound
-        ? `Lowest point, month ${plan.peakCashMonth}` +
+        ? `Lowest in ${outlookEnd}-month run, month ${plan.peakCashMonth}` +
           (plan.peakCashMonth > horizon ? `, after the ${horizon} months shown` : "")
         : `Still falling at month ${outlookEnd}`,
   );
   setText(
     "cash-payback",
     plan.cashPaybackMonth === null
-      ? `After month ${outlookEnd}`
+      ? `Not recovered within ${outlookEnd} months`
       : plan.cashPaybackMonth === 0
         ? "No cash needed"
         : `Month ${plan.cashPaybackMonth}`,
@@ -545,7 +545,7 @@ function updateEconomics() {
 
   setText(
     "break-even",
-    result.breakEvenClients === null ? "Not attainable" : `${result.breakEvenClients} clients`,
+    result.breakEvenClients === null ? "Not found through 5,000 clients" : `${result.breakEvenClients} clients (first crossing)`,
   );
   setText(
     "first-profit-month",

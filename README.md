@@ -1,6 +1,8 @@
+> Current release: v21 retains only California, New York and Texas. All 208 rows tagged to other states were removed from the calling list, browser data and downloadable workbook. Historical collection and merge descriptions below remain the record of how the earlier list was built.
+
 # Rocket Nation website v0.9
 
-This repository is the static v0.9 website snapshot. GitHub Pages serves `index.html` from the `main` branch root. The Prospects workspace includes all 72,478 company rows and a downloadable Excel workbook with the same company rows, trade summary, and city summary. The former small research set has been reconciled into this single list. See [dataset provenance](DATA-PROVENANCE.md) for the exact inputs, merge decisions, and offline rebuild method.
+This repository is the static v0.9 website snapshot. GitHub Pages serves `index.html` from the `main` branch root. The Prospects workspace includes all 72,270 company rows and a downloadable Excel workbook with the same company rows, trade summary, and city summary. The former small research set has been reconciled into this single list. See [dataset provenance](DATA-PROVENANCE.md) for the exact inputs, merge decisions, and offline rebuild method.
 
 ## Folder map
 

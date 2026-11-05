@@ -109,7 +109,9 @@ function render() {
         ? "Months to earn back sales cost: none, because contribution per client is not positive or no clients are signed."
         : `Months to earn back sales cost = (${cents.format(u.acquisitionCost)} + ${cents.format(Math.max(0, u.onboardingCost - v.setupFee))} onboarding above the setup fee) ÷ ${cents.format(u.contribution)} = <strong>${u.paybackMonths.toFixed(1)} months</strong>`,
     ),
-    item(`Expected billed months within ${horizon} months = (1 − (1 − ${number.format(v.clientLossPct)}%)^${horizon}) ÷ ${number.format(v.clientLossPct)}% = <strong>${number.format(u.expectedBilledMonths)}</strong>`),
+    item(v.clientLossPct === 0
+      ? `Expected billed months with no client loss = the full ${horizon}-month horizon = <strong>${number.format(u.expectedBilledMonths)} months</strong>`
+      : `Expected billed months within ${horizon} months = (1 − (1 − ${number.format(v.clientLossPct)}%)^${horizon}) ÷ ${number.format(v.clientLossPct)}% = <strong>${number.format(u.expectedBilledMonths)}</strong>`),
     item(
       u.lifetimeToAcquisition === null
         ? "Client gross profit vs sales cost: not applicable."
@@ -130,14 +132,15 @@ function render() {
     be === null
       ? [
           item("Each steady client count from 1 to 5,000 is tested, replacing lost clients every month and keeping the sales team."),
-          item(`No count covers all costs. At 5,000 clients: ${describe(5000)}.`),
-          item("Result: <strong>Not attainable</strong>"),
+          item(`No count through 5,000 covers all costs; larger counts were not searched. At 5,000 clients: ${describe(5000)}.`),
+          item("Result: <strong>Not found through 5,000 clients</strong>"),
         ]
       : [
           item(`Each steady client count is tested from 1 upward, with ${number.format(v.clientLossPct)}% of clients replaced each month (their setup fees count) and the sales team kept.`),
           ...(be > 1 ? [item(`${describe(be - 1)}, still a loss.`)] : []),
           item(`${describe(be)}, the first count with no loss.`),
-          item(`Result: <strong>${be} clients</strong>`),
+          item(`Result: <strong>${be} clients, the first crossing</strong>. Whole-person staffing steps can produce losses again at higher counts; this is not a sustained profitability threshold.`),
+          item(`The next 10 counts: ${Array.from({length: 10}, (_, i) => describe(be + i + 1)).join("; ")}.`),
         ],
   );
 
@@ -184,15 +187,15 @@ function render() {
     item(`Cumulative cash starts at −${money.format(v.launchCost)} (the launch cost). Each month adds that month's operating profit, as in the table above.`),
     item(
       p.peakCashNeed === 0
-        ? "Most cash invested: <strong>no cash needed</strong>, because cumulative cash never falls below zero."
+        ? `Most cash invested: <strong>no cash needed</strong>, because cumulative cash does not fall below zero within the modeled ${p.cashOutlookMonths} months.`
         : p.peakCashFound
           ? `Most cash invested = the lowest cumulative cash in a ${p.cashOutlookMonths}-month run of the same steps: ${troughText} in month ${p.peakCashMonth} = <strong>${money.format(p.peakCashNeed)}</strong>`
           : `Most cash invested: cumulative cash is still falling at month ${p.cashOutlookMonths}, so it is <strong>over ${money.format(p.peakCashNeed)}</strong>`,
     ),
     item(
       p.cashPaybackMonth === null
-        ? `All cash back by: cumulative cash is still below zero at month ${p.cashOutlookMonths}, so <strong>after month ${p.cashOutlookMonths}</strong>`
-        : `All cash back by = the month cumulative cash turns positive and stays positive = <strong>month ${p.cashPaybackMonth}</strong>`,
+        ? `All cash back by: cumulative cash is still below zero at month ${p.cashOutlookMonths}, so <strong>not recovered within ${p.cashOutlookMonths} modeled months</strong>`
+        : `All cash back by = the first month cumulative cash is nonnegative and remains so through modeled month ${p.cashOutlookMonths} = <strong>month ${p.cashPaybackMonth}</strong>`,
     ),
     item(
       p.peakCashNeed === 0
